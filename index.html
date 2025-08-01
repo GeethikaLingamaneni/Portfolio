@@ -5,29 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Geethika Lingamaneni - Business Analyst Portfolio</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
       background-color: #f8f9fa;
       color: #333;
-      text-align: center;
       line-height: 1.6;
     }
-
     header {
       background: linear-gradient(135deg, #0d0d0d, #2e2e2e);
       color: white;
       padding: 70px 20px 40px;
+      text-align: center;
       position: relative;
     }
-
-    .header-content {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
     .social-links {
       position: absolute;
       top: 20px;
@@ -45,27 +36,17 @@
       font-size: 1.8rem;
       transition: color 0.3s ease;
     }
-    .icon-row a:hover {
-      color: #007bff;
-    }
-
     .resume-download {
       margin-top: 6px;
       background: white;
       color: black;
-      padding: 6px 16px;
-      border-radius: 8px;
+      padding: 6px 14px;
+      border-radius: 6px;
       font-size: 0.85rem;
       font-weight: 600;
       text-decoration: none;
-      transition: all 0.3s ease;
-      white-space: nowrap;
       box-shadow: 1px 1px 6px rgba(0,0,0,0.2);
     }
-    .resume-download:hover {
-      background: #f1f1f1;
-    }
-
     .profile-pic {
       width: 220px;
       height: 220px;
@@ -75,18 +56,6 @@
       box-shadow: 0 4px 10px rgba(0,0,0,0.3);
       margin-bottom: 15px;
     }
-
-    header h1 {
-      font-size: 3rem;
-      font-weight: 800;
-      margin-top: 10px;
-    }
-    header p {
-      font-size: 1.3rem;
-      font-weight: 500;
-      margin-top: 5px;
-    }
-
     nav {
       margin-top: 20px;
     }
@@ -95,37 +64,26 @@
       margin: 0 8px;
       text-decoration: none;
       font-weight: 500;
-      background: linear-gradient(145deg, #4f4f4f, #3a3a3a);
-      padding: 10px 18px;
-      border-radius: 8px;
-      box-shadow: 2px 2px 6px rgba(0,0,0,0.4);
-      transition: all 0.3s ease;
+      background: #4a4a4a;
+      padding: 8px 16px;
+      border-radius: 6px;
     }
-    nav a:hover {
-      background: linear-gradient(145deg, #6b6b6b, #4f4f4f);
-      transform: translateY(-2px);
-    }
-
     section {
-      max-width: 950px;
+      max-width: 1000px;
       margin: 50px auto;
       padding: 0 20px;
     }
-    p {
-      text-align: justify;
+    h2 {
+      font-weight: 700;
+      margin-bottom: 20px;
     }
-
     ul {
       list-style: none;
       padding-left: 0;
-      text-align: left;
-      display: inline-block;
     }
     ul li {
       padding-left: 20px;
       position: relative;
-      margin-bottom: 6px;
-      font-weight: 500;
     }
     ul li::before {
       content: "➤";
@@ -134,8 +92,7 @@
       color: black;
       font-size: 0.9rem;
     }
-
-    /* Project cards */
+    /* Projects */
     .project-card {
       background: white;
       border-radius: 12px;
@@ -144,37 +101,31 @@
       display: flex;
       flex-direction: column;
       height: 100%;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
     .project-card img {
       width: 100%;
       height: 180px;
       object-fit: cover;
     }
-    .project-card .content {
-      padding: 15px;
-      flex-grow: 1;
+    .project-card .card-body {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
     }
     .project-card h5 {
-      font-weight: 700;
-      margin-bottom: 8px;
+      font-weight: bold;
     }
-    .project-card p {
-      font-size: 0.95rem;
-      color: #555;
-    }
-    .project-card .btn-group {
-      display: flex;
-      gap: 8px;
-      margin-top: auto;
-    }
-    .project-card a.btn {
-      flex: 1;
+    .btn-custom {
+      background: #4a4a4a;
+      color: white;
+      padding: 6px 14px;
+      border-radius: 6px;
+      text-decoration: none;
       font-size: 0.85rem;
+      font-weight: 600;
     }
-    .project-card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+    .btn-custom:hover {
+      background: #5c5c5c;
     }
   </style>
 </head>
@@ -188,55 +139,33 @@
     </div>
     <a href="https://github.com/GeethikaLingamaneni/Portfolio/raw/main/GeethikaLingamaneni_LatestResumeAugust.pdf" target="_blank" class="resume-download">Download Resume</a>
   </div>
-
-  <div class="header-content">
-    <img src="https://raw.githubusercontent.com/GeethikaLingamaneni/Portfolio/main/IMG_0447.JPG" alt="Profile Picture" class="profile-pic">
-    <h1>Geethika Lingamaneni</h1>
-    <p>Business Analyst | BI Specialist | Data Strategist</p>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </div>
+  <img src="https://raw.githubusercontent.com/GeethikaLingamaneni/Portfolio/main/IMG_0447.JPG" class="profile-pic" alt="Profile Picture">
+  <h1>Geethika Lingamaneni</h1>
+  <p>Business Analyst | BI Specialist | Data Strategist</p>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
 </header>
 
 <section id="about">
-  <h2>🚀 About Me</h2>
-  <p><strong>Strategic Business Analyst</strong> with a proven track record of delivering high-impact, data-driven solutions that drive business growth and operational efficiency. With over 4 years of experience, I excel in leveraging <strong>Power BI, SQL, and advanced analytics</strong> to transform raw data into actionable insights that inform executive decisions.</p>
-  
-  <div class="subheading">Skills</div>
-  <ul>
-    <li>Data Analytics & Visualization: Power BI, Tableau, KPI Analysis, Data Cleaning, ETL</li>
-    <li>Programming & Database: SQL, Python, R, Java, MS SQL Server</li>
-    <li>Process Optimization & Documentation: User Stories, Workflow Analysis, UML</li>
-    <li>Tools: Microsoft Office Suite, JIRA, RStudio, Git, Visio</li>
-    <li>Methodologies: Agile, Scrum</li>
-  </ul>
-
-  <div class="subheading">Certifications</div>
-  <ul>
-    <li>Google Project Management: Professional Certificate</li>
-    <li>Google Business Intelligence: Professional Certificate</li>
-    <li>LinkedIn Learning: Power BI Essential Training, SQL for Data Analysis, Excel with Power Query & Power Pivot</li>
-    <li>Udemy: Python for Beginners to Advanced, AWS Services for Solution Architect Associates</li>
-  </ul>
+  <h2>About Me</h2>
+  <p><strong>Strategic Business Analyst</strong> with a proven track record...</p>
 </section>
 
 <section id="projects">
-  <h2>📊 Featured Projects</h2>
+  <h2>Featured Projects</h2>
   <div class="row g-4">
     
-    <!-- Gender/Age/Emotion Detection -->
+    <!-- Gender Age Emotion -->
     <div class="col-md-4 d-flex">
       <div class="project-card">
-        <img src="https://miro.medium.com/v2/resize:fit:1400/1*ECz3eYOC3K8t2uQ6Xo8XnQ.png" alt="AI/ML Project">
-        <div class="content">
+        <img src="images/gender-age-emotion.jpg" alt="Gender Age Emotion Recognition">
+        <div class="card-body">
           <h5>Gender, Age & Emotion Detection</h5>
-          <p>AI-powered model to detect gender, age, and emotions from images or video in real-time.</p>
-          <div class="btn-group">
-            <a href="https://github.com/GeethikaLingamaneni/Gender-Age-and-Emotion-detection" target="_blank" class="btn btn-dark">GitHub</a>
-          </div>
+          <p>AI/ML-based model to detect gender, age, and emotion from images using deep learning.</p>
+          <a href="https://github.com/GeethikaLingamaneni/Gender-Age-and-Emotion-detection" class="btn-custom mt-auto">GitHub</a>
         </div>
       </div>
     </div>
@@ -244,14 +173,12 @@
     <!-- Smart Trolley -->
     <div class="col-md-4 d-flex">
       <div class="project-card">
-        <img src="https://www.researchgate.net/profile/Pranav-Kumar-Yadav/publication/352352082/figure/fig1/AS:1031092211431424@1623453137231/Proposed-Model-of-Smart-Trolley.jpg" alt="Smart Trolley">
-        <div class="content">
+        <img src="images/smart-trolley.jpg" alt="Smart Trolley">
+        <div class="card-body">
           <h5>Smart Trolley</h5>
-          <p>IoT-based smart shopping trolley to automate billing and enhance customer experience.</p>
-          <div class="btn-group">
-            <a href="https://drive.google.com/file/d/1LyJT2A_3K9S0YX6B0kUerObLCykM6S1s/view" target="_blank" class="btn btn-primary">Watch Video</a>
-            <a href="https://github.com/GeethikaLingamaneni/smart-trolley" target="_blank" class="btn btn-dark">GitHub</a>
-          </div>
+          <p>IoT-enabled trolley to scan items and automate billing for a seamless shopping experience.</p>
+          <a href="https://drive.google.com/file/d/1LyJT2A_3K9S0YX6B0kUerObLCykM6S1s/view?usp=sharing" class="btn-custom">Watch Video</a>
+          <a href="https://github.com/GeethikaLingamaneni/smart-trolley" class="btn-custom mt-2">GitHub</a>
         </div>
       </div>
     </div>
@@ -259,13 +186,11 @@
     <!-- Do Not Miss -->
     <div class="col-md-4 d-flex">
       <div class="project-card">
-        <img src="https://cdn.dribbble.com/users/285475/screenshots/16583670/media/672ffdbb0cb9bcf49ff945fcf346c8b1.png" alt="Do Not Miss App">
-        <div class="content">
+        <img src="images/do-not-miss.jpg" alt="Do Not Miss">
+        <div class="card-body">
           <h5>Do Not Miss</h5>
-          <p>Android app to manage events, reminders, and notifications efficiently.</p>
-          <div class="btn-group">
-            <a href="https://github.com/GeethikaLingamaneni/Do-not-miss" target="_blank" class="btn btn-dark">GitHub</a>
-          </div>
+          <p>Reminder and scheduling application to never miss important events and deadlines.</p>
+          <a href="https://github.com/GeethikaLingamaneni/Do-not-miss" class="btn-custom mt-auto">GitHub</a>
         </div>
       </div>
     </div>
@@ -274,11 +199,11 @@
 </section>
 
 <section id="contact">
-  <h2>📞 Contact Me</h2>
-  <p><strong>📱 Phone:</strong> <a href="tel:+17373337442">+1 (737) 333-7442</a></p>
-  <p><strong>📧 Email:</strong> <a href="mailto:geethika.lg@gmail.com">geethika.lg@gmail.com</a></p>
-  <p><strong>💼 LinkedIn:</strong> <a href="https://www.linkedin.com/in/geethikalingamaneni/" target="_blank">linkedin.com/in/geethikalingamaneni</a></p>
+  <h2>Contact Me</h2>
+  <p>📱 <a href="tel:+17373337442">+1 (737) 333-7442</a></p>
+  <p>📧 <a href="mailto:geethika.lg@gmail.com">geethika.lg@gmail.com</a></p>
 </section>
 
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </body>
 </html>
