@@ -15,7 +15,6 @@
       line-height: 1.6;
     }
 
-    /* ===== HEADER ===== */
     header {
       background: linear-gradient(135deg, #0d0d0d, #2e2e2e);
       color: white;
@@ -23,14 +22,12 @@
       position: relative;
     }
 
-    /* Keep photo & name centered */
     .header-content {
       display: flex;
       flex-direction: column;
       align-items: center;
     }
 
-    /* ===== SOCIAL LINKS (top right) ===== */
     .social-links {
       position: absolute;
       top: 20px;
@@ -52,7 +49,6 @@
       color: #007bff;
     }
 
-    /* ===== RESUME BUTTON ===== */
     .resume-download {
       margin-top: 6px;
       background: white;
@@ -70,7 +66,6 @@
       background: #f1f1f1;
     }
 
-    /* ===== PROFILE IMAGE ===== */
     .profile-pic {
       width: 220px;
       height: 220px;
@@ -82,7 +77,6 @@
       margin-bottom: 15px;
     }
 
-    /* ===== HEADINGS ===== */
     header h1 {
       font-size: 3rem;
       font-weight: 800;
@@ -97,8 +91,10 @@
       font-weight: 700 !important;
       margin-bottom: 15px;
     }
+    .subheading {
+      font-size: 1.8rem; /* Increased to match other headers */
+    }
 
-    /* ===== NAVIGATION ===== */
     nav {
       margin-top: 20px;
     }
@@ -118,7 +114,6 @@
       transform: translateY(-2px);
     }
 
-    /* ===== SECTIONS ===== */
     section {
       max-width: 850px;
       margin: 50px auto;
@@ -128,7 +123,6 @@
       text-align: justify;
     }
 
-    /* ===== BULLETS (black arrows) ===== */
     ul {
       list-style: none !important;
       padding-left: 0;
@@ -149,7 +143,6 @@
       font-size: 0.9rem;
     }
 
-    /* ===== PROJECT CARDS ===== */
     .project-card {
       background: white;
       padding: 20px;
@@ -166,7 +159,6 @@
       margin-bottom: 10px;
     }
 
-    /* ===== CONTACT ===== */
     .contact-info p {
       font-size: 1rem;
       margin-bottom: 8px;
@@ -184,7 +176,6 @@
 </head>
 <body>
   <header>
-    <!-- Social icons + resume button (top right) -->
     <div class="social-links">
       <div class="icon-row">
         <a href="https://www.linkedin.com/in/geethikalingamaneni/" target="_blank"><i class="fab fa-linkedin"></i></a>
@@ -193,7 +184,6 @@
       <a href="https://github.com/GeethikaLingamaneni/Portfolio/raw/main/GeethikaLingamaneni_LatestResumeAugust.pdf" target="_blank" class="resume-download">Download Resume</a>
     </div>
 
-    <!-- Main header content (centered) -->
     <div class="header-content">
       <img src="https://raw.githubusercontent.com/GeethikaLingamaneni/Portfolio/main/IMG_0447.JPG" alt="Profile Picture" class="profile-pic">
       <h1>Geethika Lingamaneni</h1>
@@ -206,7 +196,6 @@
     </div>
   </header>
 
-  <!-- ===== ABOUT ===== -->
   <section id="about">
     <h2>🚀 About Me</h2>
     <p><strong>Strategic Business Analyst</strong> with a proven track record of delivering high-impact, data-driven solutions that drive business growth and operational efficiency. With over 4 years of experience, I excel in leveraging <strong>Power BI, SQL, and advanced analytics</strong> to transform raw data into actionable insights that inform executive decisions. I specialize in building intuitive dashboards, optimizing ETL processes, and automating reporting workflows to save time and resources. Recognized for exceptional collaboration and stakeholder management skills, I bridge the gap between business needs and technology to deliver scalable, results-oriented solutions in Agile environments.</p>
@@ -229,7 +218,6 @@
     </ul>
   </section>
 
-  <!-- ===== PROJECTS ===== -->
   <section id="projects">
     <h2>📊 Featured Projects</h2>
     <div class="row mt-4 g-4 justify-content-center">
@@ -250,7 +238,6 @@
     </div>
   </section>
 
-  <!-- ===== CONTACT ===== -->
   <section id="contact">
     <h2>📞 Contact Me</h2>
     <div class="contact-info">
