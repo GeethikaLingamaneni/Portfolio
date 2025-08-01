@@ -19,26 +19,22 @@
       box-shadow: 0 4px 10px rgba(0,0,0,0.4);
       position: relative;
     }
+    /* Social + Resume in one row */
     .social-links {
       position: absolute;
       top: 20px;
       right: 20px;
       display: flex;
-      flex-direction: column;
-      align-items: flex-end;
+      align-items: center;
+      gap: 15px;
     }
-    .icon-row {
-      display: flex;
-      gap: 12px;
-      margin-bottom: 10px;
-    }
-    .icon-row a {
+    .social-links a {
       color: white;
       font-size: 1.8rem;
       text-decoration: none;
       transition: color 0.3s ease;
     }
-    .icon-row a:hover {
+    .social-links a:hover {
       color: #007bff;
     }
     .resume-download {
@@ -50,6 +46,7 @@
       text-decoration: none;
       font-weight: 500;
       transition: background 0.3s ease;
+      white-space: nowrap;
     }
     .resume-download:hover {
       background: #0056b3;
@@ -101,13 +98,13 @@
 </head>
 <body>
   <header>
+    <!-- Icons + Resume in one row -->
     <div class="social-links">
-      <div class="icon-row">
-        <a href="https://www.linkedin.com/in/geethikalingamaneni/" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/GeethikaLingamaneni" target="_blank"><i class="fab fa-github"></i></a>
-      </div>
+      <a href="https://www.linkedin.com/in/geethikalingamaneni/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/GeethikaLingamaneni" target="_blank"><i class="fab fa-github"></i></a>
       <a href="https://github.com/GeethikaLingamaneni/Portfolio/raw/main/GeethikaLingamaneni_LatestResumeAugust.pdf" target="_blank" class="resume-download">Download Resume</a>
     </div>
+
     <img src="https://raw.githubusercontent.com/GeethikaLingamaneni/Portfolio/main/IMG_0447.JPG" alt="Profile Picture" class="profile-pic">
     <h1>Geethika Lingamaneni</h1>
     <p>Business Analyst | BI Specialist | Data Strategist</p>
