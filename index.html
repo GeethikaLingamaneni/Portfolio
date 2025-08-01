@@ -11,8 +11,22 @@
       background: linear-gradient(135deg, #0d0d0d, #2e2e2e);
       color: white; padding: 70px 20px; text-align: center;
       box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+      position: relative;
     }
-    header h1 { font-size: 3rem; font-weight: 800; letter-spacing: 1px; }
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid white;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      position: absolute;
+      top: -75px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: white;
+    }
+    header h1 { font-size: 3rem; font-weight: 800; letter-spacing: 1px; margin-top: 90px; }
     header p { font-size: 1.3rem; font-weight: 500; margin-top: 10px; }
     nav { margin-top: 20px; }
     nav a {
@@ -33,8 +47,8 @@
     }
     .about-text {
       font-size: 1.1rem; max-width: 900px; margin: 20px auto; text-align: center; line-height: 1.6;
-      background-color: #eef5ff; /* Light blue background */
-      padding: 20px; border-radius: 10px; color: #1a1a1a; /* Darker text for contrast */
+      background-color: #eef5ff;
+      padding: 20px; border-radius: 10px; color: #1a1a1a;
       box-shadow: 0 4px 10px rgba(0,0,0,0.05);
     }
     .subheading { font-weight: 700; color: #007bff; margin-top: 30px; font-size: 1.4rem; }
@@ -48,13 +62,11 @@
     .project-card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.15); }
     .placeholder-icon { font-size: 40px; margin-bottom: 10px; color: #007bff; }
     .coming-soon { font-style: italic; color: #6c757d; }
-    footer { background: #0d0d0d; color: white; padding: 25px 0; text-align: center; margin-top: 50px; }
-    footer a { color: #fff; text-decoration: none; margin: 0 5px; }
-    footer a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
   <header>
+    <img src="IMG_0447.JPG" alt="Profile Picture" class="profile-pic">
     <h1>Geethika Lingamaneni</h1>
     <p>Business Analyst | BI Specialist | Data Strategist</p>
     <nav>
@@ -119,12 +131,9 @@
       <p>📱 Phone: <a href="tel:+17373337442">+1 (737) 333-7442</a></p>
       <p>📧 Email: <a href="mailto:geethika.lg@gmail.com">geethika.lg@gmail.com</a></p>
       <p>💼 LinkedIn: <a href="https://www.linkedin.com/in/geethikalingamaneni/" target="_blank">linkedin.com/in/geethikalingamaneni</a></p>
+      <p>💻 GitHub: <a href="https://github.com/GeethikaLingamaneni" target="_blank">github.com/GeethikaLingamaneni</a></p>
       <p>📄 Resume: <a href="https://github.com/GeethikaLingamaneni/Portfolio/raw/main/GeethikaLingamaneni_LatestResumeAugust.pdf" target="_blank">View My Resume (PDF)</a></p>
     </div>
   </section>
-
-  <footer>
-    <p>📧 geethika.lg@gmail.com | <a href="https://www.linkedin.com/in/geethikalingamaneni/" target="_blank">LinkedIn</a> | <a href="https://github.com/GeethikaLingamaneni" target="_blank">GitHub</a></p>
-  </footer>
 </body>
 </html>
