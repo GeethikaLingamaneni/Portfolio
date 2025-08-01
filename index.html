@@ -13,21 +13,36 @@
       box-shadow: 0 4px 10px rgba(0,0,0,0.4);
       position: relative;
     }
+    .social-links {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+    .social-links a {
+      color: white;
+      margin-left: 10px;
+      font-size: 1.5rem;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .social-links a:hover {
+      color: #007bff;
+    }
     .profile-pic {
-      width: 150px;
-      height: 150px;
-      object-fit: contain; /* Changed from cover to contain */
+      width: 170px;
+      height: 170px;
+      object-fit: cover; /* Show full face without cutting */
+      object-position: top center; /* Focus on the face */
       border-radius: 50%;
       border: 4px solid white;
       box-shadow: 0 4px 10px rgba(0,0,0,0.3);
       position: absolute;
-      top: -75px;
+      top: -85px;
       left: 50%;
       transform: translateX(-50%);
       background-color: white;
-      padding: 3px; /* Adds space so image isn't cut */
     }
-    header h1 { font-size: 3rem; font-weight: 800; letter-spacing: 1px; margin-top: 90px; }
+    header h1 { font-size: 3rem; font-weight: 800; letter-spacing: 1px; margin-top: 100px; }
     header p { font-size: 1.3rem; font-weight: 500; margin-top: 10px; }
     nav { margin-top: 20px; }
     nav a {
@@ -42,31 +57,15 @@
       transform: translateY(-2px);
       box-shadow: 3px 3px 8px rgba(0,0,0,0.5);
     }
-    .section-title { font-size: 2rem; margin-top: 50px; font-weight: 700; text-align: center; color: #222; position: relative; }
-    .section-title::after {
-      content: ""; display: block; width: 80px; height: 4px; background: #007bff; margin: 10px auto 0; border-radius: 2px;
-    }
-    .about-text {
-      font-size: 1.1rem; max-width: 900px; margin: 20px auto; text-align: center; line-height: 1.6;
-      background-color: #eef5ff;
-      padding: 20px; border-radius: 10px; color: #1a1a1a;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    }
-    .subheading { font-weight: 700; color: #007bff; margin-top: 30px; font-size: 1.4rem; }
-    ul { list-style: none; padding: 0; }
-    ul li { margin: 8px 0; padding-left: 25px; position: relative; }
-    ul li::before { content: "✔"; position: absolute; left: 0; color: #007bff; }
-    .project-card {
-      background: white; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-      padding: 20px; height: 100%; text-align: center; transition: transform 0.3s, box-shadow 0.3s;
-    }
-    .project-card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.15); }
-    .placeholder-icon { font-size: 40px; margin-bottom: 10px; color: #007bff; }
-    .coming-soon { font-style: italic; color: #6c757d; }
   </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
   <header>
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/geethikalingamaneni/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/GeethikaLingamaneni" target="_blank"><i class="fab fa-github"></i></a>
+    </div>
     <img src="https://raw.githubusercontent.com/GeethikaLingamaneni/Portfolio/main/IMG_0447.JPG" alt="Profile Picture" class="profile-pic">
     <h1>Geethika Lingamaneni</h1>
     <p>Business Analyst | BI Specialist | Data Strategist</p>
@@ -76,7 +75,5 @@
       <a href="#contact">Contact</a>
     </nav>
   </header>
-
-  <!-- Rest of your code remains unchanged -->
 </body>
 </html>
