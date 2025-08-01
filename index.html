@@ -160,6 +160,7 @@
       color: inherit;
       display: block;
       transition: all 0.3s ease;
+      height: 100%;
     }
     .project-card:hover {
       transform: translateY(-3px);
@@ -194,6 +195,28 @@
     }
     #contact a:hover {
       color: #5da9ff;
+    }
+
+    /* ===== SCROLL TO TOP ===== */
+    #scrollBtn {
+      display: none;
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 99;
+      font-size: 18px;
+      border: none;
+      outline: none;
+      background-color: #4A4A4A;
+      color: white;
+      cursor: pointer;
+      padding: 12px 15px;
+      border-radius: 50%;
+      transition: all 0.3s ease;
+    }
+    #scrollBtn:hover {
+      background-color: #2C7BE5;
+      transform: scale(1.1);
     }
 
     /* ===== OFFSET FOR FIXED HEADER ===== */
@@ -273,32 +296,39 @@
     <h2>Featured Projects</h2>
     <div class="row g-4 mt-3">
 
-      <!-- Gender, Age & Emotion Detection Project -->
+      <!-- Do Not Miss Project -->
       <div class="col-md-4 col-sm-6">
-        <a href="https://github.com/GeethikaLingamaneni/Gender-Age-and-Emotion-detection" target="_blank" class="project-card">
-          <img src="https://images.unsplash.com/photo-1581090700227-4c4f50b1a2f3" alt="Gender, Age & Emotion Detection">
+        <a href="https://github.com/GeethikaLingamaneni/Do-not-miss" target="_blank" class="project-card">
+          <img src="https://raw.githubusercontent.com/GeethikaLingamaneni/Portfolio/main/do_not_miss.jpg.png" alt="Do Not Miss Project">
           <div class="p-3">
-            <p class="coming-soon">Gender, Age & Emotion Detection – AI Vision</p>
+            <p class="coming-soon">Do Not Miss – Event Tracking & Reminder System</p>
           </div>
         </a>
       </div>
 
       <!-- Smart Trolley Project -->
       <div class="col-md-4 col-sm-6">
-        <a href="https://github.com/GeethikaLingamaneni/smart-trolley" target="_blank" class="project-card">
-          <img src="https://images.unsplash.com/photo-1581090700227-4c4f50b1a2f3?ixlib=rb-4.0.3&q=80&fm=jpg&crop=entropy&cs=tinysrgb" alt="Smart Trolley">
-          <div class="p-3">
+        <div class="project-card">
+          <a href="https://github.com/GeethikaLingamaneni/smart-trolley" target="_blank">
+            <img src="https://raw.githubusercontent.com/GeethikaLingamaneni/Portfolio/main/smart_trolley.jpg.png" alt="Smart Trolley">
+          </a>
+          <div class="p-3 text-center">
             <p class="coming-soon">Smart Trolley – AI/IoT Shopping Cart</p>
+            <a href="https://drive.google.com/file/d/1LyJT2A_3K9S0YX6B0kUerObLCykM6S1s/view?usp=drive_link" 
+               target="_blank" 
+               style="display:inline-block; margin-top:8px; padding:6px 12px; background:#2C7BE5; color:white; border-radius:6px; font-size:0.85rem; text-decoration:none; font-weight:600;">
+              🎥 Watch Video
+            </a>
           </div>
-        </a>
+        </div>
       </div>
 
-      <!-- Placeholder Project -->
+      <!-- Gender, Age & Emotion Detection Project -->
       <div class="col-md-4 col-sm-6">
-        <a href="#" class="project-card">
-          <img src="https://images.unsplash.com/photo-1556767576-cfba0bfc02b9" alt="Data Dashboard">
+        <a href="https://github.com/GeethikaLingamaneni/Gender-Age-and-Emotion-detection" target="_blank" class="project-card">
+          <img src="https://raw.githubusercontent.com/GeethikaLingamaneni/Portfolio/main/gender_age_emotion.jpg.png" alt="Gender, Age & Emotion Detection">
           <div class="p-3">
-            <p class="coming-soon">Coming Soon...</p>
+            <p class="coming-soon">Gender, Age & Emotion Detection – AI Vision</p>
           </div>
         </a>
       </div>
@@ -313,6 +343,28 @@
     <p><strong>📧 Email:</strong> <a href="mailto:geethika.lg@gmail.com">geethika.lg@gmail.com</a></p>
     <p><strong>💼 LinkedIn:</strong> <a href="https://www.linkedin.com/in/geethikalingamaneni/" target="_blank">linkedin.com/in/geethikalingamaneni</a></p>
   </section>
+
+  <!-- SCROLL TO TOP BUTTON -->
+  <button onclick="scrollToTop()" id="scrollBtn" title="Go to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script>
+    // Show button when scrolling down
+    window.onscroll = function() {
+      const scrollBtn = document.getElementById("scrollBtn");
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        scrollBtn.style.display = "block";
+      } else {
+        scrollBtn.style.display = "none";
+      }
+    };
+
+    // Smooth scroll to top
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
 
 </body>
 </html>
