@@ -10,7 +10,7 @@
       font-family: 'Segoe UI', sans-serif;
       background-color: #f8f9fa;
       color: #333;
-      text-align: center; /* Center all text globally */
+      text-align: center;
     }
     header {
       background: linear-gradient(135deg, #0d0d0d, #2e2e2e);
@@ -102,14 +102,34 @@
       transform: translateY(-2px);
       box-shadow: 3px 3px 8px rgba(0,0,0,0.5);
     }
-    /* Center sections like old version */
+    /* Center sections */
     section {
       max-width: 800px;
       margin: 0 auto;
     }
+    /* Headings bold */
+    h2, .subheading {
+      font-weight: 700;
+    }
+    /* Custom bullets */
     ul {
-      text-align: left; /* Keep skill lists readable */
+      text-align: left;
       display: inline-block;
+      padding-left: 0;
+      list-style: none;
+    }
+    ul li {
+      padding-left: 20px;
+      position: relative;
+      margin-bottom: 6px;
+      font-weight: 500;
+    }
+    ul li::before {
+      content: "➤";
+      position: absolute;
+      left: 0;
+      color: black; /* Black arrows */
+      font-size: 0.9rem;
     }
   </style>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -136,8 +156,8 @@
   </header>
 
   <section id="about" class="container my-5">
-    <h2 class="section-title">🚀 About Me</h2>
-    <p class="about-text"><strong>Strategic Business Analyst</strong> with a proven track record of delivering high-impact, data-driven solutions that drive business growth and operational efficiency. With over 4 years of experience, I excel in leveraging <strong>Power BI, SQL, and advanced analytics</strong> to transform raw data into actionable insights that inform executive decisions. I specialize in building intuitive dashboards, optimizing ETL processes, and automating reporting workflows to save time and resources. Recognized for exceptional collaboration and stakeholder management skills, I bridge the gap between business needs and technology to deliver scalable, results-oriented solutions in Agile environments.</p>
+    <h2>🚀 About Me</h2>
+    <p><strong>Strategic Business Analyst</strong> with a proven track record of delivering high-impact, data-driven solutions that drive business growth and operational efficiency. With over 4 years of experience, I excel in leveraging <strong>Power BI, SQL, and advanced analytics</strong> to transform raw data into actionable insights that inform executive decisions. I specialize in building intuitive dashboards, optimizing ETL processes, and automating reporting workflows to save time and resources. Recognized for exceptional collaboration and stakeholder management skills, I bridge the gap between business needs and technology to deliver scalable, results-oriented solutions in Agile environments.</p>
     
     <div class="subheading">Skills</div>
     <ul>
@@ -158,19 +178,19 @@
   </section>
 
   <section id="projects" class="container my-5">
-    <h2 class="section-title">📊 Featured Projects</h2>
+    <h2>📊 Featured Projects</h2>
     <div class="row mt-4 g-4 justify-content-center">
       <div class="col-md-5">
         <div class="project-card">
           <div class="placeholder-icon">📂</div>
-          <h5>Project Placeholder</h5>
+          <h5><strong>Project Placeholder</strong></h5>
           <p class="coming-soon">Coming soon...</p>
         </div>
       </div>
       <div class="col-md-5">
         <div class="project-card">
           <div class="placeholder-icon">📂</div>
-          <h5>Project Placeholder</h5>
+          <h5><strong>Project Placeholder</strong></h5>
           <p class="coming-soon">Coming soon...</p>
         </div>
       </div>
@@ -178,12 +198,8 @@
   </section>
 
   <section id="contact" class="container my-5">
-    <h2 class="section-title">📞 Contact Me</h2>
+    <h2>📞 Contact Me</h2>
     <div class="contact-info">
-      <p>📱 Phone: <a href="tel:+17373337442">+1 (737) 333-7442</a></p>
-      <p>📧 Email: <a href="mailto:geethika.lg@gmail.com">geethika.lg@gmail.com</a></p>
-      <p>💼 LinkedIn: <a href="https://www.linkedin.com/in/geethikalingamaneni/" target="_blank">linkedin.com/in/geethikalingamaneni</a></p>
-    </div>
-  </section>
-</body>
-</html>
+      <p><strong>📱 Phone:</strong> <a href="tel:+17373337442">+1 (737) 333-7442</a></p>
+      <p><strong>📧 Email:</strong> <a href="mailto:geethika.lg@gmail.com">geethika.lg@gmail.com</a></p>
+      <p><strong>💼 LinkedIn:</strong> <a href="https://www.linkedin.com/in/geethikalingamaneni/" target="_blank">lin_
