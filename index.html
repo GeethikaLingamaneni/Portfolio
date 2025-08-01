@@ -77,7 +77,7 @@
       background: #4A4A4A;
       color: white;
       padding: 8px 18px;
-      border-radius: 8px; /* Slight curve */
+      border-radius: 6px;
       font-size: 0.85rem;
       font-weight: 600;
       text-decoration: none;
@@ -100,7 +100,7 @@
       background: #4A4A4A;
       color: white;
       padding: 8px 18px;
-      border-radius: 6px; /* Slight curve */
+      border-radius: 6px;
       font-size: 0.85rem;
       font-weight: 600;
       text-decoration: none;
@@ -110,27 +110,6 @@
     .nav-buttons a:hover {
       background: #5c5c5c;
       transform: scale(1.05);
-    }
-
-    /* ===== SCROLL TO TOP BUTTON ===== */
-    #scrollTopBtn {
-      position: fixed;
-      bottom: 25px;
-      right: 25px;
-      background: #4A4A4A;
-      color: white;
-      border: none;
-      padding: 10px 14px;
-      border-radius: 50%;
-      font-size: 1.2rem;
-      cursor: pointer;
-      display: none;
-      z-index: 999;
-      transition: all 0.3s ease;
-    }
-    #scrollTopBtn:hover {
-      background: #5c5c5c;
-      transform: scale(1.1);
     }
 
     /* ===== SECTIONS ===== */
@@ -282,10 +261,10 @@
 
     <div class="subheading">Certifications</div>
     <ul>
-      <li>Google Project Management: Professional Certificate</li>
-      <li>Google Business Intelligence: Professional Certificate</li>
-      <li>LinkedIn Learning: Power BI Essential Training, SQL for Data Analysis, Excel with Power Query & Power Pivot, Program Management Foundations</li>
-      <li>Udemy: Python for Beginners to Advanced, AWS Services for Solution Architect Associates, DevOps Fundamentals</li>
+      <li><strong>Google Project Management:</strong> Professional Certificate</li>
+      <li><strong>Google Business Intelligence:</strong> Professional Certificate</li>
+      <li><strong>LinkedIn Learning:</strong> <em>Power BI Essential Training, SQL for Data Analysis, Excel with Power Query &amp; Power Pivot, Program Management Foundations</em></li>
+      <li><strong>Udemy:</strong> <em>Python for Beginners to Advanced, AWS Services for Solution Architect Associates, DevOps Fundamentals</em></li>
     </ul>
   </section>
 
@@ -327,26 +306,6 @@
     <p><strong>📧 Email:</strong> <a href="mailto:geethika.lg@gmail.com">geethika.lg@gmail.com</a></p>
     <p><strong>💼 LinkedIn:</strong> <a href="https://www.linkedin.com/in/geethikalingamaneni/" target="_blank">linkedin.com/in/geethikalingamaneni</a></p>
   </section>
-
-  <!-- SCROLL TO TOP BUTTON -->
-  <button id="scrollTopBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
-
-  <!-- JS FOR SCROLL TO TOP -->
-  <script>
-    const scrollTopBtn = document.getElementById("scrollTopBtn");
-
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 200) {
-        scrollTopBtn.style.display = "block";
-      } else {
-        scrollTopBtn.style.display = "none";
-      }
-    });
-
-    scrollTopBtn.addEventListener("click", () => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
-  </script>
 
 </body>
 </html>
