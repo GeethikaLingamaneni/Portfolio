@@ -11,22 +11,24 @@
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- ✅ Font Awesome Free CDN Fix -->
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
     body {
       font-family: 'Montserrat', sans-serif;
       color: #2E2E2E;
       background-color: #fff;
-      margin: 0;
     }
 
     /* ===== HERO ===== */
     header {
       background-color: #1E2A38;
       color: white;
-      padding: 70px 20px 20px;
+      padding: 70px 20px 40px;
       position: relative;
       text-align: center;
     }
@@ -43,35 +45,31 @@
     header h1 {
       font-size: 2.5rem;
       font-weight: 700;
-      margin-bottom: 5px;
     }
     header p {
       font-size: 1.2rem;
+      margin-top: 5px;
       font-weight: 500;
-      margin-bottom: 10px;
     }
 
-    /* ===== SECTION NAV (Sticky) ===== */
-    .section-nav {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: #1E2A38;
-      padding: 10px 0;
+    /* ===== HERO NAV BUTTONS ===== */
+    .hero-buttons {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
     }
-    .section-nav a {
-      display: inline-block;
-      background: #2C7BE5;
+    .hero-buttons a {
+      background: #444;
       color: white;
-      padding: 8px 18px;
-      margin: 5px;
-      border-radius: 20px;
+      padding: 10px 22px;
       font-weight: 600;
       text-decoration: none;
+      border-radius: 4px;
       transition: background 0.3s ease;
     }
-    .section-nav a:hover {
-      background: #1b5bbf;
+    .hero-buttons a:hover {
+      background: #666;
     }
 
     /* ===== SOCIAL LINKS ===== */
@@ -126,7 +124,6 @@
     h2 {
       padding-bottom: 5px;
       display: inline-block;
-      border-bottom: 2px solid #1E2A38;
     }
     .subheading {
       font-size: 1.5rem;
@@ -199,11 +196,6 @@
       color: #5da9ff;
     }
 
-    /* ===== SMOOTH SCROLL ===== */
-    html {
-      scroll-behavior: smooth;
-    }
-
     /* ===== RESPONSIVE ===== */
     @media (max-width: 768px) {
       .social-links {
@@ -241,14 +233,14 @@
     <img src="https://raw.githubusercontent.com/GeethikaLingamaneni/Portfolio/main/IMG_0447.JPG" alt="Profile Picture" class="profile-pic">
     <h1>Geethika Lingamaneni</h1>
     <p>Business Analyst | BI Specialist | Data Strategist</p>
-  </header>
 
-  <!-- STICKY SECTION NAV -->
-  <div class="section-nav">
-    <a href="#about">About Me</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact Me</a>
-  </div>
+    <!-- Navigation Buttons -->
+    <div class="hero-buttons">
+      <a href="#about">About Me</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact Me</a>
+    </div>
+  </header>
 
   <!-- ABOUT SECTION -->
   <section id="about">
@@ -280,25 +272,19 @@
       <div class="col-md-4 col-sm-6">
         <a href="#" class="project-card">
           <img src="https://images.unsplash.com/photo-1556767576-cfba0bfc02b9" alt="Data Dashboard">
-          <div class="p-3">
-            <p class="coming-soon">Coming Soon...</p>
-          </div>
+          <p class="coming-soon">Coming Soon...</p>
         </a>
       </div>
       <div class="col-md-4 col-sm-6">
         <a href="#" class="project-card">
           <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c" alt="Predictive Modeling">
-          <div class="p-3">
-            <p class="coming-soon">Coming Soon...</p>
-          </div>
+          <p class="coming-soon">Coming Soon...</p>
         </a>
       </div>
       <div class="col-md-4 col-sm-6">
         <a href="#" class="project-card">
           <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71" alt="ETL Process Optimization">
-          <div class="p-3">
-            <p class="coming-soon">Coming Soon...</p>
-          </div>
+          <p class="coming-soon">Coming Soon...</p>
         </a>
       </div>
     </div>
@@ -311,6 +297,19 @@
     <p><strong>📧 Email:</strong> <a href="mailto:geethika.lg@gmail.com">geethika.lg@gmail.com</a></p>
     <p><strong>💼 LinkedIn:</strong> <a href="https://www.linkedin.com/in/geethikalingamaneni/" target="_blank">linkedin.com/in/geethikalingamaneni</a></p>
   </section>
+
+  <!-- Smooth Scroll Offset Fix -->
+  <script>
+    document.querySelectorAll('.hero-buttons a').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        const targetEl = document.querySelector(targetId);
+        const offset = targetEl.getBoundingClientRect().top + window.pageYOffset - 50; // 50px offset
+        window.scrollTo({ top: offset, behavior: 'smooth' });
+      });
+    });
+  </script>
 
 </body>
 </html>
