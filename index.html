@@ -19,39 +19,46 @@
       box-shadow: 0 4px 10px rgba(0,0,0,0.4);
       position: relative;
     }
-    /* Social + Resume in one row */
+    /* Social icons */
     .social-links {
       position: absolute;
       top: 20px;
       right: 20px;
       display: flex;
-      align-items: center;
-      gap: 15px;
+      flex-direction: column;
+      align-items: flex-end;
     }
-    .social-links a {
+    .icon-row {
+      display: flex;
+      gap: 12px;
+    }
+    .icon-row a {
       color: white;
       font-size: 1.8rem;
       text-decoration: none;
       transition: color 0.3s ease;
     }
-    .social-links a:hover {
-      color: #007bff;
+    .icon-row a:hover {
+      color: #ffcc00; /* gold hover effect */
     }
+    /* Resume button below icons */
     .resume-download {
-      background: #007bff;
-      color: white;
-      padding: 6px 12px;
-      border-radius: 15px;
-      font-size: 0.85rem;
+      margin-top: 6px;
+      background: #ffcc00; /* gold/yellow */
+      color: black;
+      padding: 4px 10px;
+      border-radius: 12px;
+      font-size: 0.78rem;
       text-decoration: none;
       font-weight: 500;
-      transition: background 0.3s ease;
+      transition: background 0.3s ease, color 0.3s ease;
       white-space: nowrap;
     }
     .resume-download:hover {
-      background: #0056b3;
-      color: white;
+      background: #e6b800;
+      color: black;
     }
+    /* Profile image */
     .profile-pic {
       width: 220px;
       height: 220px;
@@ -98,10 +105,12 @@
 </head>
 <body>
   <header>
-    <!-- Icons + Resume in one row -->
+    <!-- Icons with resume below -->
     <div class="social-links">
-      <a href="https://www.linkedin.com/in/geethikalingamaneni/" target="_blank"><i class="fab fa-linkedin"></i></a>
-      <a href="https://github.com/GeethikaLingamaneni" target="_blank"><i class="fab fa-github"></i></a>
+      <div class="icon-row">
+        <a href="https://www.linkedin.com/in/geethikalingamaneni/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/GeethikaLingamaneni" target="_blank"><i class="fab fa-github"></i></a>
+      </div>
       <a href="https://github.com/GeethikaLingamaneni/Portfolio/raw/main/GeethikaLingamaneni_LatestResumeAugust.pdf" target="_blank" class="resume-download">Download Resume</a>
     </div>
 
