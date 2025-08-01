@@ -13,16 +13,14 @@
     nav a:hover { text-decoration: underline; }
     .section-title { font-size: 1.8rem; margin-top: 40px; font-weight: bold; text-align: center; }
     .about-text { font-size: 1.05rem; max-width: 900px; margin: 0 auto; text-align: center; }
-    .skills-grid { display: flex; flex-wrap: wrap; gap: 20px; margin-top: 20px; justify-content: center; }
-    .skill-card { background: white; border-radius: 12px; padding: 20px; flex: 1 1 280px; max-width: 300px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); transition: transform 0.3s, box-shadow 0.3s; }
-    .skill-card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.15); }
-    .skill-card h5 { font-size: 1.1rem; margin-bottom: 12px; text-align: center; color: #004085; }
-    .skill-card ul { padding-left: 18px; margin-bottom: 0; }
     .project-card { background: white; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); padding: 20px; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; transition: transform 0.3s, box-shadow 0.3s; }
     .project-card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.15); }
     .placeholder-icon { font-size: 40px; margin-bottom: 10px; color: #007bff; }
     .coming-soon { font-style: italic; color: #6c757d; }
     footer { background: #004085; color: white; padding: 20px 0; text-align: center; margin-top: 40px; }
+    .contact-info { font-size: 1.1rem; text-align: center; }
+    .contact-info a { color: #004085; text-decoration: none; }
+    .contact-info a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
@@ -31,26 +29,23 @@
     <p>Business Analyst | Data Analyst | BI Specialist</p>
     <nav>
       <a href="#about">About</a>
-      <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
 
   <section id="about" class="container my-5">
     <h2 class="section-title">🚀 About Me</h2>
     <p class="about-text">Results-driven Business Analyst with 4+ years of experience translating business needs into data-driven solutions. Skilled in Power BI, SQL, and ETL workflows, I excel at building impactful dashboards, streamlining reporting, and delivering insights that enhance decision-making. Known for collaboration, problem-solving, and Agile expertise, I focus on driving efficiency and measurable business improvements.</p>
-  </section>
-
-  <section id="skills" class="container my-5">
-    <h2 class="section-title">💡 Skills & Certifications</h2>
-    <div class="skills-grid">
-      <div class="skill-card"><h5>📊 Data Analytics & Visualization</h5><ul><li>Power BI</li><li>Tableau</li><li>KPI Analysis</li><li>Data Cleaning</li><li>ETL</li></ul></div>
-      <div class="skill-card"><h5>🗄 Programming & Database</h5><ul><li>SQL</li><li>Python</li><li>R</li><li>Java</li><li>MS SQL Server</li></ul></div>
-      <div class="skill-card"><h5>📝 Process Optimization & Documentation</h5><ul><li>User Stories</li><li>Workflow Analysis</li><li>UML</li></ul></div>
-      <div class="skill-card"><h5>💻 Tools</h5><ul><li>Microsoft Office Suite</li><li>JIRA</li><li>RStudio</li><li>Git</li><li>Visio</li></ul></div>
-      <div class="skill-card"><h5>⚡ Methodologies</h5><ul><li>Agile</li><li>Scrum</li></ul></div>
-      <div class="skill-card"><h5>📜 Certifications</h5><ul><li>Google Project Management: Professional Certificate (Coursera)</li><li>Google Business Intelligence: Professional Certificate (Coursera)</li><li>Power BI Essential Training (LinkedIn Learning)</li><li>SQL for Data Analysis (LinkedIn Learning)</li><li>Python for Beginners to Advanced (Udemy)</li><li>AWS Services for Solution Architect Associates (Udemy)</li></ul></div>
-    </div>
+    <h3 class="mt-4">Skills & Certifications</h3>
+    <ul>
+      <li>📊 Data Analytics & Visualization: Power BI, Tableau, KPI Analysis, Data Cleaning, ETL</li>
+      <li>🗄 Programming & Database: SQL, Python, R, Java, MS SQL Server</li>
+      <li>📝 Process Optimization & Documentation: User Stories, Workflow Analysis, UML</li>
+      <li>💻 Tools: Microsoft Office Suite, JIRA, RStudio, Git, Visio</li>
+      <li>⚡ Methodologies: Agile, Scrum</li>
+      <li>📜 Certifications: Google Project Management (Coursera), Google BI (Coursera), Power BI Essential Training (LinkedIn), SQL for Data Analysis (LinkedIn), Python for Beginners to Advanced (Udemy), AWS Services for Solution Architect Associates (Udemy)</li>
+    </ul>
   </section>
 
   <section id="projects" class="container my-5">
@@ -77,6 +72,15 @@
           <p class="coming-soon">Coming soon...</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section id="contact" class="container my-5">
+    <h2 class="section-title">📞 Contact Me</h2>
+    <div class="contact-info">
+      <p>📱 Phone: <a href="tel:+17373337442">+1 (737) 333-7442</a></p>
+      <p>📧 Email: <a href="mailto:geethika.lg@gmail.com">geethika.lg@gmail.com</a></p>
+      <p>💼 LinkedIn: <a href="https://www.linkedin.com/in/geethikalingamaneni/" target="_blank">linkedin.com/in/geethikalingamaneni</a></p>
     </div>
   </section>
 
