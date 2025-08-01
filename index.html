@@ -166,11 +166,14 @@
       transform: translateY(-3px);
       box-shadow: 0 6px 18px rgba(0,0,0,0.12);
     }
+   
     .project-card img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-    }
+  width: 100%;
+  height: 200px; /* Make all project images the same height */
+  object-fit: cover; /* Keeps the image cropped nicely without distortion */
+  display: block;
+}
+
     .project-card .p-3 {
       padding: 15px !important;
     }
@@ -236,6 +239,7 @@
         justify-content: center;
       }
     }
+    
   </style>
 </head>
 <body>
