@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Geethika Lingamaneni - Business Analyst Portfolio</title>
 
-  <!-- Google Font -->
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
   <!-- Bootstrap CSS -->
@@ -20,8 +20,6 @@
       color: #2E2E2E;
       background-color: #fff;
       scroll-behavior: smooth;
-      margin: 0;
-      padding-top: 70px; /* offset for fixed navbar */
     }
 
     /* ===== NAVBAR ===== */
@@ -39,46 +37,38 @@
       font-weight: 600;
       transition: color 0.3s ease;
     }
-    nav .nav-link:hover,
-    nav .nav-link.active {
+    nav .nav-link:hover, nav .nav-link.active {
       color: #2C7BE5;
     }
     .navbar-icons a {
       color: white;
       font-size: 1.4rem;
-      margin-left: 15px;
+      margin-left: 14px;
       transition: color 0.3s ease;
-      display: inline-flex;
-      align-items: center;
     }
     .navbar-icons a:hover {
       color: #2C7BE5;
     }
     .resume-download {
-      background: none;
-      border: none;
       color: white;
-      font-size: 1rem;
       font-weight: 600;
       display: inline-flex;
       align-items: center;
+      gap: 6px;
+      font-size: 1rem;
       text-decoration: none;
-      margin-left: 15px;
       transition: color 0.3s ease;
-    }
-    .resume-download i {
-      margin-left: 5px;
     }
     .resume-download:hover {
       color: #2C7BE5;
     }
 
-    /* ===== HOME ===== */
-    #home {
-      text-align: center;
+    /* ===== HERO ===== */
+    header {
       background-color: #1E2A38;
       color: white;
-      padding: 60px 20px;
+      padding: 140px 20px 60px;
+      text-align: center;
     }
     .profile-pic {
       width: 220px;
@@ -90,11 +80,11 @@
       background-color: white;
       box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     }
-    #home h1 {
+    header h1 {
       font-size: 2.5rem;
       font-weight: 700;
     }
-    #home p {
+    header p {
       font-size: 1.2rem;
       font-weight: 500;
     }
@@ -104,15 +94,21 @@
       max-width: 1100px;
       margin: 50px auto;
       padding: 0 20px;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease-out;
+    }
+    section.show {
+      opacity: 1;
+      transform: translateY(0);
     }
     h2 {
       font-weight: 700;
       margin-bottom: 20px;
     }
     .subheading {
-      font-size: 1.5rem;
       font-weight: 700;
-      color: #1E2A38;
+      font-size: 1.5rem;
       margin-top: 20px;
     }
 
@@ -128,7 +124,9 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.05);
       text-decoration: none;
       color: inherit;
-      display: block;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
     .project-card:hover {
@@ -148,7 +146,7 @@
       font-size: 0.85rem;
       font-weight: 600;
       text-decoration: none;
-      margin-top: 8px;
+      margin-top: auto;
       display: inline-block;
       transition: all 0.3s ease;
     }
@@ -200,26 +198,32 @@
   <!-- NAVBAR -->
   <nav class="navbar navbar-expand-md">
     <div class="container">
-      <ul class="navbar-nav me-auto">
-        <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-      </ul>
-      <div class="navbar-icons">
-        <a href="https://www.linkedin.com/in/geethikalingamaneni/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/GeethikaLingamaneni" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-        <a href="https://github.com/GeethikaLingamaneni/Portfolio/raw/main/GeethikaLingamaneni_LatestResumeAugust.pdf" target="_blank" class="resume-download">Resume <i class="fas fa-download"></i></a>
+      <!-- Left side -->
+      <div>
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Right side -->
+      <div class="ms-auto navbar-icons">
+        <a href="https://www.linkedin.com/in/geethikalingamaneni/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/GeethikaLingamaneni" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://github.com/GeethikaLingamaneni/Portfolio/raw/main/GeethikaLingamaneni_LatestResumeAugust.pdf" target="_blank" class="resume-download">
+          Resume <i class="fas fa-download"></i>
+        </a>
       </div>
     </div>
   </nav>
 
-  <!-- HOME -->
-  <section id="home">
+  <!-- HERO -->
+  <header id="home">
     <img src="https://raw.githubusercontent.com/GeethikaLingamaneni/Portfolio/main/IMG_0447.JPG" alt="Profile Picture" class="profile-pic">
     <h1>Geethika Lingamaneni</h1>
     <p>Business Analyst | BI Specialist | Data Strategist</p>
-  </section>
+  </header>
 
   <!-- ABOUT -->
   <section id="about">
@@ -248,14 +252,14 @@
   <section id="projects">
     <h2>Featured Projects</h2>
     <div class="row g-4 mt-3">
-      <!-- Gender, Age & Emotion Detection -->
+      <!-- Project cards same height -->
       <div class="col-md-4 col-sm-6">
         <a href="https://github.com/GeethikaLingamaneni/Gender-Age-and-Emotion-detection" target="_blank" class="project-card">
           <img src="https://raw.githubusercontent.com/GeethikaLingamaneni/Portfolio/main/gender_age_emotion.jpg.png">
           <div class="p-3"><p class="coming-soon">Gender, Age & Emotion Detection – Facial Image Processing</p></div>
         </a>
       </div>
-      <!-- Fall Detection -->
+
       <div class="col-md-4 col-sm-6">
         <div class="project-card">
           <a href="https://github.com/GeethikaLingamaneni/Fall-Detection" target="_blank">
@@ -267,7 +271,7 @@
           </div>
         </div>
       </div>
-      <!-- To-Do List Angular -->
+
       <div class="col-md-4 col-sm-6">
         <div class="project-card">
           <a href="https://geethikalingamaneni.github.io/todolist-angular/" target="_blank">
@@ -279,7 +283,7 @@
           </div>
         </div>
       </div>
-      <!-- Smart Trolley -->
+
       <div class="col-md-4 col-sm-6">
         <div class="project-card">
           <a href="https://github.com/GeethikaLingamaneni/smart-trolley" target="_blank">
@@ -291,7 +295,7 @@
           </div>
         </div>
       </div>
-      <!-- Do Not Miss -->
+
       <div class="col-md-4 col-sm-6">
         <a href="https://github.com/GeethikaLingamaneni/Do-not-miss" target="_blank" class="project-card">
           <img src="https://raw.githubusercontent.com/GeethikaLingamaneni/Portfolio/main/do_not_miss.jpg.png">
@@ -309,23 +313,48 @@
     <p><strong>💼 LinkedIn:</strong> <a href="https://www.linkedin.com/in/geethikalingamaneni/" target="_blank">linkedin.com/in/geethikalingamaneni</a></p>
   </section>
 
-  <!-- SCROLL TO TOP BUTTON -->
+  <!-- SCROLL TO TOP -->
   <button onclick="scrollToTop()" id="scrollBtn" title="Go to top">
     <i class="fas fa-chevron-up"></i>
   </button>
 
   <script>
-    // Show button when scrolling down
+    // Active nav highlight
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll(".nav-link");
+    window.addEventListener("scroll", () => {
+      let current = "";
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 120;
+        if (pageYOffset >= sectionTop) current = section.getAttribute("id");
+      });
+      navLinks.forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === "#" + current) link.classList.add("active");
+      });
+    });
+
+    // Fade-in animation
+    const revealElements = document.querySelectorAll("section, .project-card");
+    function revealOnScroll() {
+      const windowHeight = window.innerHeight;
+      revealElements.forEach(el => {
+        const elementTop = el.getBoundingClientRect().top;
+        if (elementTop < windowHeight - 50) el.classList.add("show");
+      });
+    }
+    window.addEventListener("scroll", revealOnScroll);
+    window.addEventListener("load", revealOnScroll);
+
+    // Scroll to top
+    const scrollBtn = document.getElementById("scrollBtn");
     window.onscroll = function() {
-      const scrollBtn = document.getElementById("scrollBtn");
       if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
         scrollBtn.style.display = "block";
       } else {
         scrollBtn.style.display = "none";
       }
     };
-
-    // Smooth scroll to top
     function scrollToTop() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
