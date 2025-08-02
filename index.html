@@ -20,6 +20,7 @@
       color: #2E2E2E;
       background-color: #fff;
       scroll-behavior: smooth;
+      padding-top: 70px; /* Prevent content hiding under fixed navbar */
     }
 
     /* ===== NAVBAR ===== */
@@ -42,12 +43,13 @@
     }
     .navbar-icons a {
       color: white;
-      font-size: 1.2rem;
-      margin-right: 12px;
-      transition: color 0.3s ease;
+      font-size: 1.5rem; /* Increased size */
+      margin-right: 14px;
+      transition: transform 0.2s ease, color 0.3s ease;
     }
     .navbar-icons a:hover {
       color: #2C7BE5;
+      transform: scale(1.1);
     }
     .resume-download {
       background: #4A4A4A;
@@ -68,7 +70,7 @@
     header {
       background-color: #1E2A38;
       color: white;
-      padding: 140px 20px 60px;
+      padding: 80px 20px 60px;
       text-align: center;
     }
     .profile-pic {
@@ -306,7 +308,7 @@
     window.addEventListener("scroll", () => {
       let current = "";
       sections.forEach(section => {
-        const sectionTop = section.offsetTop - 100;
+        const sectionTop = section.offsetTop - 120;
         if (pageYOffset >= sectionTop) current = section.getAttribute("id");
       });
       navLinks.forEach(link => {
