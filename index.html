@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Geethika Lingamaneni - Business Analyst Portfolio</title>
 
-  <!-- Google Font -->
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
   <!-- Bootstrap CSS -->
@@ -17,8 +17,8 @@
   <style>
     body {
       font-family: 'Montserrat', sans-serif;
-      color: #2E2E2E;
       background-color: #fff;
+      color: #2E2E2E;
       scroll-behavior: smooth;
     }
 
@@ -35,37 +35,42 @@
     nav .nav-link {
       color: white;
       font-weight: 600;
-      padding: 8px 15px;
       transition: color 0.3s ease;
+      margin-right: 15px;
     }
-    nav .nav-link:hover, nav .nav-link.active {
+    nav .nav-link:hover,
+    nav .nav-link.active {
       color: #2C7BE5;
     }
-    .navbar-icons a,
+    .navbar-icons a {
+      color: white;
+      font-size: 1.5rem;
+      margin-left: 12px;
+      transition: color 0.3s ease;
+    }
+    .navbar-icons a:hover {
+      color: #2C7BE5;
+    }
     .resume-download {
       display: inline-flex;
       align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: 1rem;
-      height: 40px;
-      min-width: 40px;
-      border-radius: 6px;
-      text-decoration: none;
-      margin-left: 8px;
       background: #4A4A4A;
-      padding: 0 12px;
+      color: white;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-decoration: none;
       transition: all 0.3s ease;
-      white-space: nowrap;
-    }
-    .navbar-icons a:hover,
-    .resume-download:hover {
-      background: #5c5c5c;
-      color: #2C7BE5;
-      transform: scale(1.05);
+      margin-left: 12px;
     }
     .resume-download i {
       margin-left: 6px;
+      font-size: 1rem;
+    }
+    .resume-download:hover {
+      background: #5c5c5c;
+      transform: scale(1.05);
     }
 
     /* ===== HERO ===== */
@@ -94,12 +99,18 @@
       font-weight: 500;
     }
 
-    /* ===== SECTION STYLING ===== */
+    /* ===== SECTIONS ===== */
     section {
       max-width: 1100px;
       margin: 50px auto;
       padding: 0 20px;
-      scroll-margin-top: 90px; /* Ensures section starts below navbar */
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease-out;
+    }
+    section.show {
+      opacity: 1;
+      transform: translateY(0);
     }
     h2 {
       font-weight: 700;
@@ -109,7 +120,7 @@
       font-size: 1.5rem;
       font-weight: 700;
       margin-top: 20px;
-      margin-bottom: 10px;
+      color: #000;
     }
 
     /* ===== PROJECTS ===== */
@@ -168,7 +179,7 @@
       color: #5da9ff;
     }
 
-    /* ===== SCROLL TO TOP BUTTON ===== */
+    /* ===== SCROLL TO TOP ===== */
     #scrollBtn {
       display: none;
       position: fixed;
@@ -177,6 +188,7 @@
       z-index: 99;
       font-size: 18px;
       border: none;
+      outline: none;
       background-color: #4A4A4A;
       color: white;
       cursor: pointer;
@@ -194,17 +206,15 @@
 
   <!-- NAVBAR -->
   <nav class="navbar navbar-expand-md">
-    <div class="container">
-      <!-- Left side -->
-      <div class="collapse navbar-collapse" id="navMenu">
-        <ul class="navbar-nav me-auto">
-          <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-        </ul>
-      </div>
-      <!-- Right side -->
+    <div class="container d-flex justify-content-between">
+      <!-- Left: Nav Links -->
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+      <!-- Right: Icons -->
       <div class="navbar-icons d-flex align-items-center">
         <a href="https://www.linkedin.com/in/geethikalingamaneni/" target="_blank"><i class="fab fa-linkedin"></i></a>
         <a href="https://github.com/GeethikaLingamaneni" target="_blank"><i class="fab fa-github"></i></a>
@@ -215,7 +225,7 @@
     </div>
   </nav>
 
-  <!-- HERO / HOME -->
+  <!-- HERO -->
   <header id="home">
     <img src="https://raw.githubusercontent.com/GeethikaLingamaneni/Portfolio/main/IMG_0447.JPG" alt="Profile Picture" class="profile-pic">
     <h1>Geethika Lingamaneni</h1>
@@ -310,30 +320,14 @@
     <p><strong>💼 LinkedIn:</strong> <a href="https://www.linkedin.com/in/geethikalingamaneni/" target="_blank">linkedin.com/in/geethikalingamaneni</a></p>
   </section>
 
-  <!-- SCROLL TO TOP BUTTON -->
+  <!-- SCROLL TO TOP -->
   <button onclick="scrollToTop()" id="scrollBtn" title="Go to top">
     <i class="fas fa-chevron-up"></i>
   </button>
 
-  <!-- BOOTSTRAP JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script>
-    // Active nav highlight
-    const sections = document.querySelectorAll("section");
-    const navLinks = document.querySelectorAll(".nav-link");
-    window.addEventListener("scroll", () => {
-      let current = "";
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop - 100;
-        if (pageYOffset >= sectionTop) current = section.getAttribute("id");
-      });
-      navLinks.forEach(link => {
-        link.classList.remove("active");
-        if (link.getAttribute("href") === "#" + current) link.classList.add("active");
-      });
-    });
-
-    // Scroll to top button
+    // Show button when scrolling down
     window.onscroll = function() {
       const scrollBtn = document.getElementById("scrollBtn");
       if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
@@ -342,9 +336,38 @@
         scrollBtn.style.display = "none";
       }
     };
+
+    // Scroll to top function
     function scrollToTop() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
+
+    // Active nav highlight
+    const sections = document.querySelectorAll("section, header");
+    const navLinks = document.querySelectorAll(".nav-link");
+    window.addEventListener("scroll", () => {
+      let current = "";
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 80;
+        if (pageYOffset >= sectionTop) current = section.getAttribute("id");
+      });
+      navLinks.forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === "#" + current) link.classList.add("active");
+      });
+    });
+
+    // Fade-in animation
+    const revealElements = document.querySelectorAll("section, .project-card");
+    function revealOnScroll() {
+      const windowHeight = window.innerHeight;
+      revealElements.forEach(el => {
+        const elementTop = el.getBoundingClientRect().top;
+        if (elementTop < windowHeight - 50) el.classList.add("show");
+      });
+    }
+    window.addEventListener("scroll", revealOnScroll);
+    window.addEventListener("load", revealOnScroll);
   </script>
 </body>
 </html>
