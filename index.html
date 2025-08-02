@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Geethika Lingamaneni - Business Analyst Portfolio</title>
 
-  <!-- Google Font -->
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
   <!-- Bootstrap CSS -->
@@ -24,7 +24,7 @@
 
     /* ===== NAVBAR ===== */
     nav {
-      background-color: #1E2A38;
+      background-color: #1E2A38 !important;
       position: fixed;
       top: 0;
       width: 100%;
@@ -33,31 +33,39 @@
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
     nav .nav-link {
-      color: white;
+      color: white !important;
       font-weight: 600;
       transition: color 0.3s ease;
-      font-size: 1rem;
-      padding: 8px 15px;
     }
-    nav .nav-link:hover, nav .nav-link.active {
-      color: #2C7BE5;
+    nav .nav-link:hover,
+    nav .nav-link.active {
+      color: #2C7BE5 !important;
     }
     .navbar-icons a {
       color: white;
-      font-size: 1.3rem;
-      width: 38px;
-      height: 38px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 6px;
-      transition: all 0.3s ease;
-      background: transparent;
-      text-decoration: none;
+      font-size: 1.4rem;
+      margin-left: 15px;
+      transition: color 0.3s ease;
     }
     .navbar-icons a:hover {
-      background: rgba(255, 255, 255, 0.15);
       color: #2C7BE5;
+    }
+    .resume-download {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background: #4A4A4A;
+      color: white;
+      border-radius: 50%;
+      font-size: 1.2rem;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    .resume-download:hover {
+      background: #5c5c5c;
+      transform: scale(1.05);
     }
 
     /* ===== HERO ===== */
@@ -86,7 +94,7 @@
       font-weight: 500;
     }
 
-    /* ===== SECTION ANIMATIONS ===== */
+    /* ===== SECTIONS ===== */
     section {
       max-width: 1100px;
       margin: 50px auto;
@@ -94,6 +102,7 @@
       opacity: 0;
       transform: translateY(20px);
       transition: all 0.6s ease-out;
+      scroll-margin-top: 90px;
     }
     section.show {
       opacity: 1;
@@ -106,8 +115,8 @@
     .subheading {
       font-size: 1.5rem;
       font-weight: 700;
-      color: #1E2A38;
       margin-top: 20px;
+      margin-bottom: 10px;
     }
 
     /* ===== PROJECTS ===== */
@@ -172,7 +181,7 @@
       color: #5da9ff;
     }
 
-    /* ===== SCROLL TO TOP ===== */
+    /* ===== SCROLL TO TOP BUTTON ===== */
     #scrollBtn {
       display: none;
       position: fixed;
@@ -200,34 +209,28 @@
   <!-- NAVBAR -->
   <nav class="navbar navbar-expand-md">
     <div class="container">
-      <!-- Left: Navigation -->
-      <div class="collapse navbar-collapse" id="navMenu">
-        <ul class="navbar-nav me-auto">
-          <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-        </ul>
-      </div>
-
-      <!-- Right: Icons & Resume -->
-      <div class="d-flex align-items-center navbar-icons">
-        <a href="https://www.linkedin.com/in/geethikalingamaneni/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/GeethikaLingamaneni" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-        <a href="https://github.com/GeethikaLingamaneni/Portfolio/raw/main/GeethikaLingamaneni_LatestResumeAugust.pdf" 
-           target="_blank" title="Download Resume"><i class="fas fa-download"></i></a>
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+      <div class="navbar-icons">
+        <a href="https://www.linkedin.com/in/geethikalingamaneni/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/GeethikaLingamaneni" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://github.com/GeethikaLingamaneni/Portfolio/raw/main/GeethikaLingamaneni_LatestResumeAugust.pdf" target="_blank" class="resume-download" title="Download Resume">
+          <i class="fas fa-download"></i>
+        </a>
       </div>
     </div>
   </nav>
 
-  <!-- HOME -->
-  <section id="home">
-    <header>
-      <img src="https://raw.githubusercontent.com/GeethikaLingamaneni/Portfolio/main/IMG_0447.JPG" alt="Profile Picture" class="profile-pic">
-      <h1>Geethika Lingamaneni</h1>
-      <p>Business Analyst | BI Specialist | Data Strategist</p>
-    </header>
-  </section>
+  <!-- HERO / HOME -->
+  <header id="home">
+    <img src="https://raw.githubusercontent.com/GeethikaLingamaneni/Portfolio/main/IMG_0447.JPG" alt="Profile Picture" class="profile-pic">
+    <h1>Geethika Lingamaneni</h1>
+    <p>Business Analyst | BI Specialist | Data Strategist</p>
+  </header>
 
   <!-- ABOUT -->
   <section id="about">
@@ -271,7 +274,7 @@
           </a>
           <div class="p-3 text-center">
             <p class="coming-soon">Fall Detection – OpenPose</p>
-            <a href="https://drive.google.com/file/d/1bydAwXN0LR8OS-ZPp9z3GpvNgmEwwsHO/view" target="_blank" class="watch-video-btn">🎥 Watch Video</a>
+            <a href="https://drive.google.com/file/d/1bydAwXN0LR8OS-ZPp9z3GpvNgmEwwsHO/view?usp=drive_link" target="_blank" class="watch-video-btn">🎥 Watch Video</a>
           </div>
         </div>
       </div>
@@ -295,7 +298,7 @@
           </a>
           <div class="p-3 text-center">
             <p class="coming-soon">Smart Trolley – IoT Shopping Cart</p>
-            <a href="https://drive.google.com/file/d/1LyJT2A_3K9S0YX6B0kUerObLCykM6S1s/view" target="_blank" class="watch-video-btn">🎥 Watch Video</a>
+            <a href="https://drive.google.com/file/d/1LyJT2A_3K9S0YX6B0kUerObLCykM6S1s/view?usp=drive_link" target="_blank" class="watch-video-btn">🎥 Watch Video</a>
           </div>
         </div>
       </div>
@@ -325,6 +328,21 @@
   <!-- BOOTSTRAP JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script>
+    // Scroll to top
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Show button when scrolling
+    window.onscroll = function() {
+      const scrollBtn = document.getElementById("scrollBtn");
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        scrollBtn.style.display = "block";
+      } else {
+        scrollBtn.style.display = "none";
+      }
+    };
+
     // Active nav highlight
     const sections = document.querySelectorAll("section");
     const navLinks = document.querySelectorAll(".nav-link");
@@ -351,19 +369,6 @@
     }
     window.addEventListener("scroll", revealOnScroll);
     window.addEventListener("load", revealOnScroll);
-
-    // Scroll to top
-    window.onscroll = function() {
-      const scrollBtn = document.getElementById("scrollBtn");
-      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-        scrollBtn.style.display = "block";
-      } else {
-        scrollBtn.style.display = "none";
-      }
-    };
-    function scrollToTop() {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
   </script>
 </body>
 </html>
