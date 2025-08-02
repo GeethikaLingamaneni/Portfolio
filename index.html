@@ -56,17 +56,17 @@
       top: 20px;
       right: 20px;
       display: flex;
-      flex-direction: column;
-      align-items: flex-end;
+      flex-direction: row;
+      align-items: center;
+      gap: 18px;
     }
     .icon-row {
       display: flex;
-      gap: 12px;
-      margin-bottom: 6px;
+      gap: 15px;
     }
     .icon-row a {
       color: white;
-      font-size: 1.8rem;
+      font-size: 2rem;
       text-decoration: none;
       transition: color 0.3s ease;
     }
@@ -76,13 +76,20 @@
     .resume-download {
       background: #4A4A4A;
       color: white;
-      padding: 8px 18px;
+      padding: 10px 20px;
       border-radius: 6px;
-      font-size: 0.85rem;
+      font-size: 0.9rem;
       font-weight: 600;
       text-decoration: none;
       box-shadow: 0 2px 5px rgba(0,0,0,0.2);
       transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      height: 40px;
+    }
+    .resume-download i {
+      font-size: 1.1rem;
     }
     .resume-download:hover {
       background: #5c5c5c;
@@ -172,7 +179,6 @@
       object-fit: cover;
       display: block;
     }
-    /* Special shrink for gender image */
     .project-card img.gender-img {
       object-fit: contain;
       background: white;
@@ -239,35 +245,17 @@
       border-radius: 50%;
       transition: all 0.3s ease;
     }
-#scrollBtn:hover {
-  background-color: #5c5c5c; /* same as other buttons hover */
-  transform: scale(1.1);
-}
-
-
-    /* ===== OFFSET FOR FIXED HEADER ===== */
-    :target {
-      scroll-margin-top: 100px;
+    #scrollBtn:hover {
+      background-color: #5c5c5c;
+      transform: scale(1.1);
     }
-    /* Fix scroll offset for anchored sections */
-:target {
-  scroll-margin-top: 100px; /* Adjust based on header height */
-}
-html {
-  scroll-behavior: smooth;
-}
-
 
     /* ===== RESPONSIVE ===== */
     @media (max-width: 768px) {
       .social-links {
         position: static;
-        flex-direction: row;
-        justify-content: center;
-        margin-bottom: 15px;
-      }
-      .icon-row {
-        justify-content: center;
+        flex-direction: column;
+        align-items: center;
       }
     }
   </style>
@@ -286,7 +274,7 @@ html {
         </a>
       </div>
       <a href="https://github.com/GeethikaLingamaneni/Portfolio/raw/main/GeethikaLingamaneni_LatestResumeAugust.pdf" target="_blank" class="resume-download">
-         Download Resume
+         <i class="fas fa-file-download"></i> Resume
       </a>
     </div>
 
@@ -294,7 +282,6 @@ html {
     <h1>Geethika Lingamaneni</h1>
     <p>Business Analyst | BI Specialist | Data Strategist</p>
 
-    <!-- Centered Nav Buttons -->
     <div class="nav-buttons">
       <a href="#about">About Me</a>
       <a href="#projects">Projects</a>
@@ -330,8 +317,6 @@ html {
     <h2>Featured Projects</h2>
     <div class="row g-4 mt-3">
 
-    
-         <!-- Gender, Age & Emotion Detection Project -->
       <div class="col-md-4 col-sm-6">
         <a href="https://github.com/GeethikaLingamaneni/Gender-Age-and-Emotion-detection" target="_blank" class="project-card">
           <img src="https://raw.githubusercontent.com/GeethikaLingamaneni/Portfolio/main/gender_age_emotion.jpg.png" alt="Gender, Age & Emotion Detection" class="gender-img">
@@ -341,41 +326,30 @@ html {
         </a>
       </div>
 
-       <!-- Fall Detection Project -->
-    <div class="col-md-4 col-sm-6">
-      <div class="project-card">
-        <a href="https://github.com/GeethikaLingamaneni/Fall-Detection" target="_blank">
-          <img src="https://raw.githubusercontent.com/GeethikaLingamaneni/Portfolio/main/Falldetection_img.png" alt="Fall Detection – OpenPose">
-        </a>
-        <div class="p-3 text-center">
-          <p class="coming-soon">Fall Detection – OpenPose</p>
-          <a href="https://drive.google.com/file/d/1bydAwXN0LR8OS-ZPp9z3GpvNgmEwwsHO/view?usp=drive_link" 
-             target="_blank" 
-             class="watch-video-btn">
-            🎥 Watch Video
+      <div class="col-md-4 col-sm-6">
+        <div class="project-card">
+          <a href="https://github.com/GeethikaLingamaneni/Fall-Detection" target="_blank">
+            <img src="https://raw.githubusercontent.com/GeethikaLingamaneni/Portfolio/main/Falldetection_img.png" alt="Fall Detection – OpenPose">
           </a>
+          <div class="p-3 text-center">
+            <p class="coming-soon">Fall Detection – OpenPose</p>
+            <a href="https://drive.google.com/file/d/1bydAwXN0LR8OS-ZPp9z3GpvNgmEwwsHO/view?usp=drive_link" target="_blank" class="watch-video-btn">🎥 Watch Video</a>
+          </div>
         </div>
       </div>
-    </div>
 
-<!-- To-Do List Angular Project -->
-<div class="col-md-4 col-sm-6">
-  <div class="project-card">
-    <a href="https://geethikalingamaneni.github.io/todolist-angular/" target="_blank">
-      <img src="https://raw.githubusercontent.com/GeethikaLingamaneni/Portfolio/main/To%20do%20list.png" alt="To-Do List Angular">
-    </a>
-    <div class="p-3 text-center">
-      <p class="coming-soon">To‑Do List – Simple Angular App</p>
-      <a href="https://geethikalingamaneni.github.io/todolist-angular/" 
-         target="_blank" 
-         class="watch-video-btn">
-        🌐 View
-      </a>
-    </div>
-  </div>
-</div>
+      <div class="col-md-4 col-sm-6">
+        <div class="project-card">
+          <a href="https://geethikalingamaneni.github.io/todolist-angular/" target="_blank">
+            <img src="https://raw.githubusercontent.com/GeethikaLingamaneni/Portfolio/main/To%20do%20list.png" alt="To-Do List Angular">
+          </a>
+          <div class="p-3 text-center">
+            <p class="coming-soon">To‑Do List – Simple Angular App</p>
+            <a href="https://geethikalingamaneni.github.io/todolist-angular/" target="_blank" class="watch-video-btn">🌐 View</a>
+          </div>
+        </div>
+      </div>
 
-      <!-- Smart Trolley Project -->
       <div class="col-md-4 col-sm-6">
         <div class="project-card">
           <a href="https://github.com/GeethikaLingamaneni/smart-trolley" target="_blank">
@@ -383,15 +357,11 @@ html {
           </a>
           <div class="p-3 text-center">
             <p class="coming-soon">Smart Trolley – IoT Shopping Cart</p>
-            <a href="https://drive.google.com/file/d/1LyJT2A_3K9S0YX6B0kUerObLCykM6S1s/view?usp=drive_link" 
-               target="_blank" 
-               class="watch-video-btn">
-              🎥 Watch Video
-            </a>
+            <a href="https://drive.google.com/file/d/1LyJT2A_3K9S0YX6B0kUerObLCykM6S1s/view?usp=drive_link" target="_blank" class="watch-video-btn">🎥 Watch Video</a>
           </div>
         </div>
       </div>
-     <!-- Do Not Miss Project -->
+
       <div class="col-md-4 col-sm-6">
         <a href="https://github.com/GeethikaLingamaneni/Do-not-miss" target="_blank" class="project-card">
           <img src="https://raw.githubusercontent.com/GeethikaLingamaneni/Portfolio/main/do_not_miss.jpg.png" alt="Do Not Miss Project">
@@ -400,7 +370,6 @@ html {
           </div>
         </a>
       </div>
-
 
     </div>
   </section>
@@ -419,7 +388,6 @@ html {
   </button>
 
   <script>
-    // Show button when scrolling down
     window.onscroll = function() {
       const scrollBtn = document.getElementById("scrollBtn");
       if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
@@ -428,8 +396,6 @@ html {
         scrollBtn.style.display = "none";
       }
     };
-
-    // Smooth scroll to top
     function scrollToTop() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
