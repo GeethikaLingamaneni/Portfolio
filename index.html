@@ -21,6 +21,7 @@
       background-color: #fff;
       scroll-behavior: smooth;
       margin: 0;
+      padding: 0;
     }
 
     /* ===== NAVBAR ===== */
@@ -30,39 +31,47 @@
       top: 0;
       width: 100%;
       z-index: 1000;
-      padding: 6px 0;
+      padding: 10px 0;
     }
-    .navbar-nav .nav-link {
+    nav .nav-link {
       color: white;
       font-weight: 600;
-      padding: 8px 16px;
-      font-size: 0.95rem;
+      font-size: 1.05rem;
+      padding: 10px 16px;
       transition: color 0.3s ease;
     }
-    .navbar-nav .nav-link:hover,
-    .navbar-nav .nav-link.active {
+    nav .nav-link:hover,
+    nav .nav-link.active {
       color: #2C7BE5;
     }
-
-    /* Icons and Resume button styled same as nav links */
-    .nav-icons a,
+    .nav-icons a {
+      color: white;
+      font-size: 1.5rem;
+      margin-left: 12px;
+      transition: color 0.3s ease;
+    }
+    .nav-icons a:hover {
+      color: #2C7BE5;
+    }
     .resume-btn {
       display: inline-flex;
       align-items: center;
-      justify-content: center;
-      padding: 8px 16px;
-      font-size: 0.95rem;
-      font-weight: 600;
+      background: #4A4A4A;
       color: white;
-      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      padding: 8px 14px;
+      border-radius: 6px;
+      margin-left: 12px;
       transition: all 0.3s ease;
-    }
-    .nav-icons a:hover,
-    .resume-btn:hover {
-      color: #2C7BE5;
+      text-decoration: none;
     }
     .resume-btn i {
       margin-left: 6px;
+    }
+    .resume-btn:hover {
+      background: #5c5c5c;
+      transform: scale(1.05);
     }
 
     /* ===== HERO ===== */
@@ -107,6 +116,26 @@
       margin-top: 20px;
     }
 
+    /* ===== LISTS WITH ARROWS ===== */
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    ul li {
+      position: relative;
+      padding-left: 25px;
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+    ul li::before {
+      content: "\f061"; /* Font Awesome arrow-right */
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      position: absolute;
+      left: 0;
+      color: #1E2A38;
+    }
+
     /* ===== PROJECTS ===== */
     #projects {
       background-color: #F4F6F8;
@@ -133,12 +162,16 @@
       height: 200px;
       object-fit: cover;
     }
-    /* Fix gender image */
     .project-card img.gender-img {
       object-fit: contain;
       background: white;
-      padding: 5px;
-      height: 200px;
+      padding: 8px;
+    }
+    .project-card .p-3 {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
     .watch-video-btn {
       background: #4A4A4A;
@@ -204,15 +237,20 @@
   <!-- NAVBAR -->
   <nav class="navbar navbar-expand-md">
     <div class="container">
+      <!-- Left Navigation -->
       <ul class="navbar-nav">
         <li class="nav-item"><a class="nav-link active" href="#about">About</a></li>
         <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
       </ul>
-      <div class="ms-auto nav-icons">
-        <a href="https://www.linkedin.com/in/geethikalingamaneni/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-        <a href="https://github.com/GeethikaLingamaneni" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-        <a href="https://github.com/GeethikaLingamaneni/Portfolio/raw/main/GeethikaLingamaneni_LatestResumeAugust.pdf" target="_blank" class="resume-btn">Resume <i class="fas fa-download"></i></a>
+
+      <!-- Right Icons -->
+      <div class="ms-auto d-flex align-items-center nav-icons">
+        <a href="https://www.linkedin.com/in/geethikalingamaneni/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/GeethikaLingamaneni" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://github.com/GeethikaLingamaneni/Portfolio/raw/main/GeethikaLingamaneni_LatestResumeAugust.pdf" target="_blank" class="resume-btn">
+          Resume <i class="fas fa-download"></i>
+        </a>
       </div>
     </div>
   </nav>
@@ -231,11 +269,11 @@
 
     <div class="subheading">Skills</div>
     <ul>
-      <li><strong>Data Analytics & Visualization:</strong> Power BI, Tableau, KPI Analysis, Data Cleaning, ETL</li>
-      <li><strong>Programming & Database:</strong> SQL, Python, R, Java, MS SQL Server</li>
-      <li><strong>Process Optimization & Documentation:</strong> User Stories, Workflow Analysis, UML</li>
-      <li><strong>Tools:</strong> Microsoft Office Suite, JIRA, RStudio, Git, Visio</li>
-      <li><strong>Methodologies:</strong> Agile, Scrum</li>
+      <li>Data Analytics & Visualization: Power BI, Tableau, KPI Analysis, Data Cleaning, ETL</li>
+      <li>Programming & Database: SQL, Python, R, Java, MS SQL Server</li>
+      <li>Process Optimization & Documentation: User Stories, Workflow Analysis, UML</li>
+      <li>Tools: Microsoft Office Suite, JIRA, RStudio, Git, Visio</li>
+      <li>Methodologies: Agile, Scrum</li>
     </ul>
 
     <div class="subheading">Certifications</div>
@@ -264,7 +302,7 @@
           </a>
           <div class="p-3 text-center">
             <p class="coming-soon">Fall Detection – OpenPose</p>
-            <a href="https://drive.google.com/file/d/1bydAwXN0LR8OS-ZPp9z3GpvNgmEwwsHO/view?usp=drive_link" target="_blank" class="watch-video-btn">🎥 Watch Video</a>
+            <a href="https://drive.google.com/file/d/1bydAwXN0LR8OS-ZPp9z3GpvNgmEwwsHO/view" target="_blank" class="watch-video-btn">🎥 Watch Video</a>
           </div>
         </div>
       </div>
@@ -286,7 +324,7 @@
           </a>
           <div class="p-3 text-center">
             <p class="coming-soon">Smart Trolley – IoT Shopping Cart</p>
-            <a href="https://drive.google.com/file/d/1LyJT2A_3K9S0YX6B0kUerObLCykM6S1s/view?usp=drive_link" target="_blank" class="watch-video-btn">🎥 Watch Video</a>
+            <a href="https://drive.google.com/file/d/1LyJT2A_3K9S0YX6B0kUerObLCykM6S1s/view" target="_blank" class="watch-video-btn">🎥 Watch Video</a>
           </div>
         </div>
       </div>
@@ -307,11 +345,12 @@
     <p><strong>💼 LinkedIn:</strong> <a href="https://www.linkedin.com/in/geethikalingamaneni/" target="_blank">linkedin.com/in/geethikalingamaneni</a></p>
   </section>
 
-  <!-- SCROLL TO TOP -->
+  <!-- SCROLL TO TOP BUTTON -->
   <button onclick="scrollToTop()" id="scrollBtn" title="Go to top">
     <i class="fas fa-chevron-up"></i>
   </button>
 
+  <!-- JS -->
   <script>
     // Scroll to top button
     window.onscroll = function() {
@@ -341,6 +380,5 @@
       });
     });
   </script>
-
 </body>
 </html>
