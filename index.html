@@ -43,7 +43,13 @@
     nav .nav-link.active {
       color: #2C7BE5;
     }
-    .nav-icons a {
+    .nav-icons {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: nowrap;
+    }
+    .nav-icons a.icon-link {
       color: white;
       font-size: 1.3rem;
       display: inline-flex;
@@ -51,24 +57,30 @@
       justify-content: center;
       width: 38px;
       height: 38px;
-      margin-left: 8px;
-      transition: background 0.3s ease;
+      border-radius: 50%;
+      transition: color 0.3s ease;
+      flex-shrink: 0;
     }
-    .nav-icons a:hover {
+    .nav-icons a.icon-link:hover {
       color: #2C7BE5;
     }
     .resume-btn {
       display: inline-flex;
       align-items: center;
+      justify-content: center;
       background: #4A4A4A;
       color: white;
       font-size: 0.85rem;
       font-weight: 600;
       padding: 8px 14px;
       border-radius: 6px;
-      margin-left: 8px;
       transition: all 0.3s ease;
       text-decoration: none;
+      flex-shrink: 0;
+      height: 38px;
+    }
+    .resume-btn i {
+      margin-left: 6px;
     }
     .resume-btn:hover {
       background: #5c5c5c;
@@ -219,11 +231,11 @@
         <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
       </ul>
-      <div class="ms-auto d-flex align-items-center nav-icons">
-        <a href="https://www.linkedin.com/in/geethikalingamaneni/" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/GeethikaLingamaneni" target="_blank"><i class="fab fa-github"></i></a>
+      <div class="ms-auto nav-icons">
+        <a href="https://www.linkedin.com/in/geethikalingamaneni/" target="_blank" class="icon-link"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/GeethikaLingamaneni" target="_blank" class="icon-link"><i class="fab fa-github"></i></a>
         <a href="https://github.com/GeethikaLingamaneni/Portfolio/raw/main/GeethikaLingamaneni_LatestResumeAugust.pdf" target="_blank" class="resume-btn">
-          Resume&nbsp;<i class="fas fa-download"></i>
+          Resume <i class="fas fa-download"></i>
         </a>
       </div>
     </div>
