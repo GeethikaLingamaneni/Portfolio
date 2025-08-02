@@ -22,12 +22,33 @@
       scroll-behavior: smooth;
     }
 
+    /* ===== NAVBAR ===== */
+    nav {
+      background-color: #1E2A38;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      padding: 10px 0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    nav .nav-link {
+      color: white;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    nav .nav-link:hover {
+      color: #2C7BE5;
+    }
+    nav .nav-link.active {
+      color: #2C7BE5;
+    }
+
     /* ===== HERO ===== */
     header {
       background-color: #1E2A38;
       color: white;
-      padding: 70px 20px 40px;
-      position: relative;
+      padding: 140px 20px 60px;
       text-align: center;
     }
     .profile-pic {
@@ -38,7 +59,7 @@
       border: 4px solid white;
       margin-bottom: 15px;
       background-color: white;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3), 0 0 15px rgba(255,255,255,0.2);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     }
     header h1 {
       font-size: 2.5rem;
@@ -46,34 +67,24 @@
     }
     header p {
       font-size: 1.2rem;
-      margin-top: 5px;
       font-weight: 500;
     }
 
     /* ===== SOCIAL LINKS ===== */
     .social-links {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
+      margin-top: 15px;
     }
-    .icon-row {
-      display: flex;
-      gap: 12px;
-      margin-bottom: 6px;
-    }
-    .icon-row a {
+    .social-links a {
       color: white;
       font-size: 1.8rem;
-      text-decoration: none;
+      margin: 0 8px;
       transition: color 0.3s ease;
     }
-    .icon-row a:hover {
+    .social-links a:hover {
       color: #2C7BE5;
     }
     .resume-download {
+      display: inline-block;
       background: #4A4A4A;
       color: white;
       padding: 8px 18px;
@@ -81,33 +92,10 @@
       font-size: 0.85rem;
       font-weight: 600;
       text-decoration: none;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      margin-top: 10px;
       transition: all 0.3s ease;
     }
     .resume-download:hover {
-      background: #5c5c5c;
-      transform: scale(1.05);
-    }
-
-    /* ===== NAV BUTTONS ===== */
-    .nav-buttons {
-      margin-top: 20px;
-      display: flex;
-      justify-content: center;
-      gap: 12px;
-    }
-    .nav-buttons a {
-      background: #4A4A4A;
-      color: white;
-      padding: 8px 18px;
-      border-radius: 6px;
-      font-size: 0.85rem;
-      font-weight: 600;
-      text-decoration: none;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-      transition: all 0.3s ease;
-    }
-    .nav-buttons a:hover {
       background: #5c5c5c;
       transform: scale(1.05);
     }
@@ -117,33 +105,17 @@
       max-width: 1100px;
       margin: 50px auto;
       padding: 0 20px;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease-out;
     }
-    h2, .subheading {
-      font-weight: 700 !important;
-      margin-bottom: 15px;
+    section.show {
+      opacity: 1;
+      transform: translateY(0);
     }
-    .subheading {
-      font-size: 1.5rem;
-      margin-top: 20px;
-    }
-
-    /* ===== LISTS ===== */
-    ul {
-      list-style: none;
-      padding-left: 0;
-    }
-    ul li {
-      padding-left: 20px;
-      position: relative;
-      margin-bottom: 6px;
-      font-weight: 500;
-    }
-    ul li::before {
-      content: "➤";
-      position: absolute;
-      left: 0;
-      color: black;
-      font-size: 0.85rem;
+    h2 {
+      font-weight: 700;
+      margin-bottom: 20px;
     }
 
     /* ===== PROJECTS ===== */
@@ -159,8 +131,13 @@
       text-decoration: none;
       color: inherit;
       display: block;
-      transition: all 0.3s ease;
-      height: 100%;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    .project-card.show {
+      opacity: 1;
+      transform: translateY(0);
     }
     .project-card:hover {
       transform: translateY(-3px);
@@ -170,25 +147,7 @@
       width: 100%;
       height: 200px;
       object-fit: cover;
-      display: block;
     }
-    /* Special shrink for gender image */
-    .project-card img.gender-img {
-      object-fit: contain;
-      background: white;
-      padding: 5px;
-    }
-    .project-card .p-3 {
-      padding: 15px !important;
-    }
-    .coming-soon {
-      text-align: center;
-      font-style: italic;
-      color: #777;
-      margin: 0;
-    }
-
-    /* ===== WATCH VIDEO BUTTON ===== */
     .watch-video-btn {
       background: #4A4A4A;
       color: white;
@@ -197,9 +156,9 @@
       font-size: 0.85rem;
       font-weight: 600;
       text-decoration: none;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-      transition: all 0.3s ease;
+      margin-top: 8px;
       display: inline-block;
+      transition: all 0.3s ease;
     }
     .watch-video-btn:hover {
       background: #5c5c5c;
@@ -216,7 +175,6 @@
     #contact a {
       color: #2C7BE5;
       text-decoration: none;
-      transition: color 0.3s ease;
     }
     #contact a:hover {
       color: #5da9ff;
@@ -239,70 +197,45 @@
       border-radius: 50%;
       transition: all 0.3s ease;
     }
-#scrollBtn:hover {
-  background-color: #5c5c5c; /* same as other buttons hover */
-  transform: scale(1.1);
-}
-
-
-    /* ===== OFFSET FOR FIXED HEADER ===== */
-    :target {
-      scroll-margin-top: 100px;
-    }
-    /* Fix scroll offset for anchored sections */
-:target {
-  scroll-margin-top: 100px; /* Adjust based on header height */
-}
-html {
-  scroll-behavior: smooth;
-}
-
-
-    /* ===== RESPONSIVE ===== */
-    @media (max-width: 768px) {
-      .social-links {
-        position: static;
-        flex-direction: row;
-        justify-content: center;
-        margin-bottom: 15px;
-      }
-      .icon-row {
-        justify-content: center;
-      }
+    #scrollBtn:hover {
+      background-color: #5c5c5c;
+      transform: scale(1.1);
     }
   </style>
 </head>
 <body>
 
-  <!-- HERO SECTION -->
-  <header>
-    <div class="social-links">
-      <div class="icon-row">
-        <a href="https://www.linkedin.com/in/geethikalingamaneni/" target="_blank" title="LinkedIn">
-          <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="https://github.com/GeethikaLingamaneni" target="_blank" title="GitHub">
-          <i class="fab fa-github"></i>
-        </a>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-md">
+    <div class="container">
+      <a class="navbar-brand text-white fw-bold" href="#home">Geethika</a>
+      <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
       </div>
-      <a href="https://github.com/GeethikaLingamaneni/Portfolio/raw/main/GeethikaLingamaneni_LatestResumeAugust.pdf" target="_blank" class="resume-download">
-         Download Resume
-      </a>
     </div>
+  </nav>
 
+  <!-- HERO -->
+  <header id="home">
     <img src="https://raw.githubusercontent.com/GeethikaLingamaneni/Portfolio/main/IMG_0447.JPG" alt="Profile Picture" class="profile-pic">
     <h1>Geethika Lingamaneni</h1>
     <p>Business Analyst | BI Specialist | Data Strategist</p>
 
-    <!-- Centered Nav Buttons -->
-    <div class="nav-buttons">
-      <a href="#about">About Me</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact Me</a>
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/geethikalingamaneni/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/GeethikaLingamaneni" target="_blank"><i class="fab fa-github"></i></a>
     </div>
+    <a href="https://github.com/GeethikaLingamaneni/Portfolio/raw/main/GeethikaLingamaneni_LatestResumeAugust.pdf" target="_blank" class="resume-download">Download Resume</a>
   </header>
 
-  <!-- ABOUT SECTION -->
+  <!-- ABOUT -->
   <section id="about">
     <h2>About Me</h2>
     <p><strong>Strategic Business Analyst</strong> with a proven track record of delivering high-impact, data-driven solutions that drive business growth and operational efficiency. With over 4 years of experience, I excel in leveraging <strong>Power BI, SQL, and advanced analytics</strong> to transform raw data into actionable insights that inform executive decisions. I specialize in building intuitive dashboards, optimizing ETL processes, and automating reporting workflows to save time and resources. Recognized for exceptional collaboration and stakeholder management skills, I bridge the gap between business needs and technology to deliver scalable, results-oriented solutions in Agile environments.</p>
@@ -325,57 +258,48 @@ html {
     </ul>
   </section>
 
-  <!-- PROJECTS SECTION -->
+  <!-- PROJECTS -->
   <section id="projects">
     <h2>Featured Projects</h2>
     <div class="row g-4 mt-3">
 
-    
-         <!-- Gender, Age & Emotion Detection Project -->
+      <!-- Gender, Age & Emotion Detection -->
       <div class="col-md-4 col-sm-6">
         <a href="https://github.com/GeethikaLingamaneni/Gender-Age-and-Emotion-detection" target="_blank" class="project-card">
-          <img src="https://raw.githubusercontent.com/GeethikaLingamaneni/Portfolio/main/gender_age_emotion.jpg.png" alt="Gender, Age & Emotion Detection" class="gender-img">
+          <img src="https://raw.githubusercontent.com/GeethikaLingamaneni/Portfolio/main/gender_age_emotion.jpg.png" alt="Gender, Age & Emotion Detection">
           <div class="p-3">
             <p class="coming-soon">Gender, Age & Emotion Detection – Facial Image Processing</p>
           </div>
         </a>
       </div>
 
-       <!-- Fall Detection Project -->
-    <div class="col-md-4 col-sm-6">
-      <div class="project-card">
-        <a href="https://github.com/GeethikaLingamaneni/Fall-Detection" target="_blank">
-          <img src="https://raw.githubusercontent.com/GeethikaLingamaneni/Portfolio/main/Falldetection_img.png" alt="Fall Detection – OpenPose">
-        </a>
-        <div class="p-3 text-center">
-          <p class="coming-soon">Fall Detection – OpenPose</p>
-          <a href="https://drive.google.com/file/d/1bydAwXN0LR8OS-ZPp9z3GpvNgmEwwsHO/view?usp=drive_link" 
-             target="_blank" 
-             class="watch-video-btn">
-            🎥 Watch Video
+      <!-- Fall Detection -->
+      <div class="col-md-4 col-sm-6">
+        <div class="project-card">
+          <a href="https://github.com/GeethikaLingamaneni/Fall-Detection" target="_blank">
+            <img src="https://raw.githubusercontent.com/GeethikaLingamaneni/Portfolio/main/Falldetection_img.png" alt="Fall Detection – OpenPose">
           </a>
+          <div class="p-3 text-center">
+            <p class="coming-soon">Fall Detection – OpenPose</p>
+            <a href="https://drive.google.com/file/d/1bydAwXN0LR8OS-ZPp9z3GpvNgmEwwsHO/view" target="_blank" class="watch-video-btn">🎥 Watch Video</a>
+          </div>
         </div>
       </div>
-    </div>
 
-<!-- To-Do List Angular Project -->
-<div class="col-md-4 col-sm-6">
-  <div class="project-card">
-    <a href="https://geethikalingamaneni.github.io/todolist-angular/" target="_blank">
-      <img src="https://raw.githubusercontent.com/GeethikaLingamaneni/Portfolio/main/To%20do%20list.png" alt="To-Do List Angular">
-    </a>
-    <div class="p-3 text-center">
-      <p class="coming-soon">To‑Do List – Simple Angular App</p>
-      <a href="https://geethikalingamaneni.github.io/todolist-angular/" 
-         target="_blank" 
-         class="watch-video-btn">
-        🌐 View
-      </a>
-    </div>
-  </div>
-</div>
+      <!-- To‑Do List Angular -->
+      <div class="col-md-4 col-sm-6">
+        <div class="project-card">
+          <a href="https://geethikalingamaneni.github.io/todolist-angular/" target="_blank">
+            <img src="https://raw.githubusercontent.com/GeethikaLingamaneni/Portfolio/main/To%20do%20list.png" alt="To‑Do List Angular">
+          </a>
+          <div class="p-3 text-center">
+            <p class="coming-soon">To‑Do List – Simple Angular App</p>
+            <a href="https://geethikalingamaneni.github.io/todolist-angular/" target="_blank" class="watch-video-btn">🌐 View</a>
+          </div>
+        </div>
+      </div>
 
-      <!-- Smart Trolley Project -->
+      <!-- Smart Trolley -->
       <div class="col-md-4 col-sm-6">
         <div class="project-card">
           <a href="https://github.com/GeethikaLingamaneni/smart-trolley" target="_blank">
@@ -383,29 +307,25 @@ html {
           </a>
           <div class="p-3 text-center">
             <p class="coming-soon">Smart Trolley – IoT Shopping Cart</p>
-            <a href="https://drive.google.com/file/d/1LyJT2A_3K9S0YX6B0kUerObLCykM6S1s/view?usp=drive_link" 
-               target="_blank" 
-               class="watch-video-btn">
-              🎥 Watch Video
-            </a>
+            <a href="https://drive.google.com/file/d/1LyJT2A_3K9S0YX6B0kUerObLCykM6S1s/view" target="_blank" class="watch-video-btn">🎥 Watch Video</a>
           </div>
         </div>
       </div>
-     <!-- Do Not Miss Project -->
+
+      <!-- Do Not Miss -->
       <div class="col-md-4 col-sm-6">
         <a href="https://github.com/GeethikaLingamaneni/Do-not-miss" target="_blank" class="project-card">
-          <img src="https://raw.githubusercontent.com/GeethikaLingamaneni/Portfolio/main/do_not_miss.jpg.png" alt="Do Not Miss Project">
+          <img src="https://raw.githubusercontent.com/GeethikaLingamaneni/Portfolio/main/do_not_miss.jpg.png" alt="Do Not Miss">
           <div class="p-3">
             <p class="coming-soon">Do Not Miss – Smart Delivery Box</p>
           </div>
         </a>
       </div>
 
-
     </div>
   </section>
 
-  <!-- CONTACT SECTION -->
+  <!-- CONTACT -->
   <section id="contact">
     <h2>Contact Me</h2>
     <p><strong>📱 Phone:</strong> <a href="tel:+17373337442">+1 (737) 333-7442</a></p>
@@ -413,13 +333,15 @@ html {
     <p><strong>💼 LinkedIn:</strong> <a href="https://www.linkedin.com/in/geethikalingamaneni/" target="_blank">linkedin.com/in/geethikalingamaneni</a></p>
   </section>
 
-  <!-- SCROLL TO TOP BUTTON -->
+  <!-- SCROLL TO TOP -->
   <button onclick="scrollToTop()" id="scrollBtn" title="Go to top">
     <i class="fas fa-chevron-up"></i>
   </button>
 
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script>
-    // Show button when scrolling down
+    // Scroll-to-top button
     window.onscroll = function() {
       const scrollBtn = document.getElementById("scrollBtn");
       if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
@@ -428,12 +350,36 @@ html {
         scrollBtn.style.display = "none";
       }
     };
-
-    // Smooth scroll to top
     function scrollToTop() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
-  </script>
 
-</body> 
+    // Active nav highlight
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll(".nav-link");
+    window.addEventListener("scroll", () => {
+      let current = "";
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 80;
+        if (pageYOffset >= sectionTop) current = section.getAttribute("id");
+      });
+      navLinks.forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === "#" + current) link.classList.add("active");
+      });
+    });
+
+    // Fade-in animation
+    const revealElements = document.querySelectorAll("section, .project-card");
+    function revealOnScroll() {
+      const windowHeight = window.innerHeight;
+      revealElements.forEach(el => {
+        const elementTop = el.getBoundingClientRect().top;
+        if (elementTop < windowHeight - 50) el.classList.add("show");
+      });
+    }
+    window.addEventListener("scroll", revealOnScroll);
+    window.addEventListener("load", revealOnScroll);
+  </script>
+</body>
 </html>
